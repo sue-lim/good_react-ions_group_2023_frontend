@@ -2,11 +2,11 @@ import "./Nav.css";
 
 function Nav() {
   return (
-    <nav>
+    <nav id="nav-bar">
       <div id="logo">
         <img src="https://i.postimg.cc/T14q7SSk/Brown-and-White-Named-Warner-Spencer-Logo-500-350px.png" />
       </div>
-      <ul>
+      <ul id="nav-list">
         <li>Home</li>
         <li>About</li>
         <li>Mentors</li>
