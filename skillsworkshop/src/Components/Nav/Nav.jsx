@@ -10,11 +10,11 @@ function Nav() {
         />
       </div>
       <ul id="nav-list">
-        <li>Home</li>
-        <li>About</li>
-        <li>Mentors</li>
-        <li>Sign Up</li>
-        <li>Log In</li>
+        <li>HOME</li>
+        <li>ABOUT</li>
+        <li>MENTORS</li>
+        {/* <li>Sign Up</li> */}
+        <li>LOGIN</li>
       </ul>
     </nav>
   );
