@@ -1,0 +1,20 @@
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  background-color: #3e6765;
+}
+
+#logo {
+  height: 88px;
+  margin-top: 5px;
+}
+
+#nav-list {
+  list-style: none;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}

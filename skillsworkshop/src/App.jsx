@@ -1,5 +1,5 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 // Pages
 
@@ -12,7 +12,7 @@ import "./App.css";
 const Layout = () => {
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <Outlet />
     </div>
   );
@@ -21,7 +21,7 @@ const Layout = () => {
 const router = createBrowserRouter([
   {
     element: <Layout />,
-    children: [{ path: "/", element: <HomePage /> }],
+    children: [{ path: "/", element: <Nav /> }],
   },
 ]);
 
