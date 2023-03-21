@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400&family=Manrope&display=swap");
+
+.form {
+  margin: 150px auto;
+  width: 50%;
+  padding: 40px;
+  border-radius: 5px;
+  background-color: #d9e2d5;
+  text-align: center;
+}

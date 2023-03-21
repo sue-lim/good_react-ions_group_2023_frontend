@@ -2,6 +2,8 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 // import { useState } from "react";
 
 // Pages
+import SignupPage from "./Pages/SignupPage";
+import LoginPage from "./Pages/LoginPage";
 
 // Components
 import Nav from "./Components/Nav/Nav";
@@ -21,7 +23,11 @@ const Layout = () => {
 const router = createBrowserRouter([
   {
     element: <Layout />,
-    children: [{ path: "/", element: <Nav /> }],
+    children: [
+      { path: "/", element: <Nav /> },
+      { path: "/login", element: <LoginPage /> },
+      { path: "/sign-up", element: <SignupPage /> },
+    ],
   },
 ]);
 
