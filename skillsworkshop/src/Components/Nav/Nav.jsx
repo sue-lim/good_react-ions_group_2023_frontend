@@ -11,8 +11,9 @@ function Nav() {
         />
       </div>
       <div id="nav-list">
-        <Link to="/sign-up">Sign Up</Link>
-        <Link to="/login">Login</Link>
+        <Link to="/">HOME</Link>
+        <Link to="/sign-up">SIGN UP</Link>
+        <Link to="/login">LOGIN</Link>
       </div>
     </nav>
   );
