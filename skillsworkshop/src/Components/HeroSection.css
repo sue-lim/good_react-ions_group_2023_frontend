@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@900&family=League+Spartan:wght@100;400&family=Manrope&display=swap');
+
 video {
     /* margin-top: 90px; */
     object-fit: cover;
@@ -69,7 +71,32 @@ video {
 
 #AboutUs {
     padding-top: 20px;
-    background-color: black;
-    color: whitesmoke;
+    background-color: lightgray;
     text-align: center;
+    position: relative;
+    align-items: flex;
+    align-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.title {
+    color: #4E2780;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.AboutUsTxt {
+    font-size: 20px;
+}
+
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #3E6765;
 }

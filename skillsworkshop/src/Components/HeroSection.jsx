@@ -15,11 +15,12 @@ function HeroSection() {
                 <button className='GetStartedBtn'> Get Started </button>
 
             </div>
-            <div id='AboutUs'>
-                <h1>About</h1>
-                <video src={teamvideo} autoPlay loop />
-                <p> We want to give back to the Tech Industry through Education and Workshops where Mentors can develop further their Leadership and Teaching Skills</p>
+            <div className='container'>
+                <div id='AboutUs'>
+                    <h1 className='title'>About Us</h1>
+                    <p className='AboutUsTxt'> We want to give back to the Tech Industry through Education and Workshops where Mentors can develop further their Leadership and Teaching Skills</p>
 
+                </div>
             </div>
         </div>
 
