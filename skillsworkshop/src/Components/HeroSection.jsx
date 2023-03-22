@@ -15,12 +15,15 @@ function HeroSection() {
                 <button className='GetStartedBtn'> Get Started </button>
 
             </div>
-            <div className='container'>
+            <div className='containerabout'>
                 <div id='AboutUs'>
                     <h1 className='title'>About Us</h1>
                     <p className='AboutUsTxt'> We want to give back to the Tech Industry through Education and Workshops where Mentors can develop further their Leadership and Teaching Skills</p>
 
                 </div>
+            </div>
+            <div className='containerevents'>
+                <h1 className='title'>Upcoming events</h1>
             </div>
         </div>
 

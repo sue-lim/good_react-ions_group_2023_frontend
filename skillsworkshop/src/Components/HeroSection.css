@@ -71,7 +71,7 @@ video {
 
 #AboutUs {
     padding-top: 20px;
-    background-color: lightgray;
+    background-color: white;
     text-align: center;
     position: relative;
     align-items: flex;
@@ -95,8 +95,15 @@ video {
     font-size: 20px;
 }
 
-.container {
+.containerabout {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #3E6765;
+}
+
+.containerevents {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    text-align: center;
 }
