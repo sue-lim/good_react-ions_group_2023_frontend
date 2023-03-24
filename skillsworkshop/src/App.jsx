@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 
 // Components
 import Nav from "./Components/Nav/Nav";
+import Footer from "./Components/Footer/Footer";
 
 //CSS
 import "./App.css";
@@ -17,6 +18,7 @@ const Layout = () => {
     <div>
       <Nav />
       <Outlet />
+      <Footer />
     </div>
   );
 };
