@@ -42,42 +42,40 @@ function RegistrationForm() {
   };
 
   return (
-    <div className="signup-container">
-      <form className="form" onSubmit={handleSubmit}>
-        <h2>Sign up</h2>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            placeholder="Enter username"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Your email here"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter password"
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Create Account</button>
-        <p>
-          Already have an account? Login <Link to="/login">here</Link>.
-        </p>
-      </form>
-    </div>
+    <form className="form" onSubmit={handleSubmit}>
+      <h2>Sign up</h2>
+      <div>
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter username"
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Your email here"
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          onChange={handleChange}
+        />
+      </div>
+      <button type="submit">Create Account</button>
+      <p>
+        Already have an account? Login <Link to="/login">here</Link>.
+      </p>
+    </form>
   );
 }
 
