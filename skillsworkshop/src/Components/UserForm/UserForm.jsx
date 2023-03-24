@@ -42,7 +42,7 @@ function RegistrationForm() {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <form className="form" onSubmit={handleSubmit}>
         <h2>Sign up</h2>
         <div>

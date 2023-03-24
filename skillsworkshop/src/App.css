@@ -2,18 +2,25 @@
 
 * {
   font-family: "League Spartan", "Arial";
-}
-
-.form {
-  margin: 150px auto;
-  width: 50%;
-  padding: 40px;
-  border-radius: 5px;
-  background-color: #d9e2d5;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.signup-section {
+  height: 100vh;
+}
+
+.form {
+  /* margin-top: 90px; */
+  width: 50%;
+  padding: 40px;
+  padding-top: 90px;
+  border-radius: 5px;
+  background-color: #d9e2d5;
+  text-align: center;
 }
