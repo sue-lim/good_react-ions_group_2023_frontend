@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
-import teamvideo from "./videos/GoodReactionsTeam.mp4";
+
 function HeroSection() {
   return (
     <div>
