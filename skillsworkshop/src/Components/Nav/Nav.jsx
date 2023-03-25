@@ -12,6 +12,7 @@ function Nav() {
       </div>
       <div id="nav-list">
         <Link to="/">HOME</Link>
+        <Link to="/#AboutUs">ABOUT</Link>
         <Link to="/sign-up">SIGN UP</Link>
         <Link to="/login">LOGIN</Link>
       </div>

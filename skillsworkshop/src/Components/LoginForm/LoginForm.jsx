@@ -4,16 +4,16 @@ import { Link, useNavigate, useOutletContext } from "react-router-dom";
 function LoginForm() {
   const [, setLoggedIn] = useOutletContext();
 
-  //State
+  State;
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
-  //Hooks
+  Hooks;
 
   const navigate = useNavigate();
 
-  //Actions
+  Actions;
   const handleChange = (event) => {
     const { id, value } = event.target;
     setCredentials((prevCredentials) => ({
