@@ -1,113 +1,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@900&family=League+Spartan:wght@100;400&family=Manrope&display=swap");
 
 video {
-  /* margin-top: 90px; */
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
+    /* margin-top: 90px; */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
 }
 
 .main-container {
-  height: 850px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
-  object-fit: contain;
+    height: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    object-fit: contain;
 }
 
 .today {
-  color: white;
-  font-size: 55px;
-  text-shadow: 1px 0 black, -1px 0 gray, 0 2px black, 0 -1px gray;
-  text-align: left;
-  margin-top: 30%;
-  margin-left: 20%;
+    color: white;
+    font-size: 55px;
+    text-shadow: 1px 0 black, -1px 0 gray, 0 2px black, 0 -1px gray;
+    text-align: left;
+    margin-top: 30%;
+    margin-left: 20%;
 }
 
 .tomorrow {
-  color: white;
-  font-size: 60px;
-  text-shadow: 1px 0 black, -1px 0 gray, 0 2px black, 0 -1px gray;
-  text-align: left;
-  margin-left: 20%;
+    color: white;
+    font-size: 60px;
+    text-shadow: 1px 0 black, -1px 0 gray, 0 2px black, 0 -1px gray;
+    text-align: left;
+    margin-left: 20%;
 }
 
 .start {
-  color: white;
-  margin-left: 20%;
-  text-shadow: 1px 0 black, 0 1px black;
-  font-size: 30px;
+    color: white;
+    margin-left: 20%;
+    text-shadow: 1px 0 black, 0 1px black;
+    font-size: 30px;
 }
 
 .GetStartedBtn {
-  background-color: transparent;
-  width: 150px;
-  font-size: 1.2rem;
-  color: #fff;
-  padding: 8px 20px;
-  border: 1px solid #fff;
-  transition: all 0.3s ease-out;
-  cursor: pointer;
-  margin-left: 20%;
-  margin-top: 10px;
+    background-color: #4e2780;
+    width: 150px;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 8px 20px 25px;
+    /* border: 1px solid #fff; */
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    margin-left: 20%;
+    margin-top: 10px;
 }
 
 .GetStartedBtn:hover {
-  background-color: #3e6765;
-  color: white;
-  border-radius: 0;
+    background-color: #3e6765;
+    color: white;
+    border-radius: 0;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "League Spartan", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
 }
 
 #AboutUs {
-  padding-top: 20px;
-  background-color: white;
-  text-align: center;
-  position: relative;
-  align-items: flex;
-  align-content: center;
-  margin-left: 30%;
-  margin-right: 30%;
-  border-radius: 20px;
-  padding: 40px;
-  box-sizing: border-box;
+    padding-top: 20px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    align-items: flex;
+    align-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .title {
-  color: #4e2780;
-  text-transform: uppercase;
-  font-weight: bolder;
-  margin-bottom: 10px;
-  font-family: "Barlow", sans-serif;
+    color: #4e2780;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    font-family: "Barlow", sans-serif;
 }
 
 .AboutUsTxt {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .containerabout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #3e6765;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #3e6765;
+    height: 100vh;
 }
 
 .containerevents {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: white;
-  text-align: center;
-  height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    text-align: center;
+    height: 100vh;
 }
