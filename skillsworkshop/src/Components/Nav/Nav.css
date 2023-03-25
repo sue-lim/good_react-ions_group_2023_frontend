@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400&family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600&display=swap");
 
 #nav-bar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,10 +18,17 @@
 
 #nav-list {
   font-family: "League Spartan";
-  font-size: 20px;
+  /* border-bottom: 1px solid white; */
+  font-weight: 600;
+  font-size: 23px;
   list-style: none;
-  width: 400px;
+  width: 600px;
   display: flex;
   justify-content: space-around;
   color: white;
+}
+
+#nav-list a:hover {
+  text-shadow: 2px 0 black;
+  font-size: 24px;
 }
