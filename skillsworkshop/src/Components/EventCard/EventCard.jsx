@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-import "./EventCard.css";
 // import ProgressBar from "../ProgressBar/ProgressBar";
 
 function ProjectCard(props) {
