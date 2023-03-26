@@ -19,8 +19,9 @@ function ProjectCard(props) {
     <div className="project-card">
       <Link to="/project">
         <img src={projectData.image} />
-        <h3>{projectData.title}</h3>
       </Link>
+      <h3>{projectData.title}</h3>
+      <button type="submit">Click to view</button>
     </div>
   );
 }
