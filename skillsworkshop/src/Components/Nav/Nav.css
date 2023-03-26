@@ -30,5 +30,6 @@
 
 #nav-list a:hover {
   text-shadow: 2px 0 black;
-  font-size: 24px;
+  color: #d9e2d5;
+  /* font-size: 24px; */
 }
