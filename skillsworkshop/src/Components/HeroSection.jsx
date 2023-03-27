@@ -3,7 +3,7 @@ import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
 
 import { allProjects } from "../data";
-import EventCard from "../components/EventCard/EventCard";
+import EventCard from "../Components/EventCard/EventCard";
 
 function HeroSection() {
   //   const [projectList, setProjectList] = useState([]);
