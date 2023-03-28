@@ -1,4 +1,4 @@
-import UserForm from "../components/UserForm/UserForm";
+import UserForm from "../Components/UserForm/UserForm";
 
 function LoginPage() {
   return <UserForm />;

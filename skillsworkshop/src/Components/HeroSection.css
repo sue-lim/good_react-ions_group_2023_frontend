@@ -43,12 +43,12 @@ video {
 }
 
 .GetStartedBtn {
-  background-color: transparent;
+  background-color: #4e2780;
   width: 150px;
   font-size: 1.2rem;
   color: #fff;
-  padding: 8px 20px;
-  border: 1px solid #fff;
+  padding: 8px 20px 25px;
+  /* border: 1px solid #fff; */
   transition: all 0.3s ease-out;
   cursor: pointer;
   margin-left: 20%;
@@ -56,7 +56,9 @@ video {
 }
 
 .GetStartedBtn:hover {
-  background-color: #3e6765;
+  /* background-color: #3e6765; */
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
   color: white;
   border-radius: 0;
 }
@@ -72,7 +74,6 @@ video {
   padding-top: 20px;
   background-color: white;
   text-align: center;
-  position: relative;
   align-items: flex;
   align-content: center;
   margin-left: 30%;
@@ -110,4 +111,23 @@ video {
   background-color: white;
   text-align: center;
   height: 100vh;
+}
+
+#project-list {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-top: 50px;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
