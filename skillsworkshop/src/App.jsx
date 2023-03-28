@@ -5,7 +5,6 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import SignupPage from "./Pages/SignupPage";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./Pages/HomePage";
-import HomePage from "./pages/HomePage";
 import Profile from "./Pages/UserProfile";
 
 // Components
