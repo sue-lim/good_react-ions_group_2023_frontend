@@ -5,6 +5,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import SignupPage from "./Pages/SignupPage";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./pages/HomePage";
+import Profile from "./Pages/UserProfile";
 
 // Components
 import Nav from "./Components/Nav/Nav";
@@ -30,6 +31,8 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/sign-up", element: <SignupPage /> },
+      { path: "/profile/:id", element: <Profile /> },
+      // { path: "/events/:id", element: <EventDetails/>},
     ],
   },
 ]);
