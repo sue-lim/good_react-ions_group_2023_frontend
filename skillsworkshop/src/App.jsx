@@ -5,6 +5,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import SignupPage from "./Pages/SignupPage";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./Pages/HomePage";
+import CreateEventPage from "./Pages/CreateEventPage";
 
 // Components
 import Nav from "./Components/Nav/Nav";
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/sign-up", element: <SignupPage /> },
+      { path: "/create-event", element: <CreateEventPage /> },
     ],
   },
 ]);

@@ -50,25 +50,15 @@ function LoginForm() {
   // };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div>
         <h1>Log In:</h1>
         {/* <label htmlFor="username">Username:</label> */}
-        <input
-          type="text"
-          id="username"
-          placeholder="Enter username"
-          onChange={handleChange}
-        />
+        <input type="text" id="username" placeholder="Enter username" />
       </div>
       <div>
         {/* <label htmlFor="password">Password:</label> */}
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          onChange={handleChange}
-        />
+        <input type="password" id="password" placeholder="Password" />
       </div>
       <div>
         <button className="project-button" type="submit">
