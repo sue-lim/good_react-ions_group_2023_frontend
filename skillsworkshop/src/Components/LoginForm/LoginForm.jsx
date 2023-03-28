@@ -1,58 +1,59 @@
-import { useState } from "react";
-import { Link, useNavigate, useOutletContext } from "react-router-dom";
+import React, { useState } from "react";
+// import { useNavigate, useOutletContext } from "react-router-dom";
 
 function LoginForm() {
-  const [, setLoggedIn] = useOutletContext();
+  // const [, setLoggedIn] = useOutletContext();
 
-  State;
-  const [credentials, setCredentials] = useState({
-    username: "",
-    password: "",
-  });
-  Hooks;
+  // State;
+  // const [credentials, setCredentials] = useState({
+  //   username: "",
+  //   password: "",
+  // });
 
-  const navigate = useNavigate();
+  // // Hooks
+  // const navigate = useNavigate();
 
-  Actions;
-  const handleChange = (event) => {
-    const { id, value } = event.target;
-    setCredentials((prevCredentials) => ({
-      ...prevCredentials,
-      [id]: value,
-    }));
-  };
+  // // Actions
+  // const handleChange = (event) => {
+  //   // plugging to the input - event is passed into it
+  //   const { id, value } = event.target; // get target of event which is the input
 
-  const postData = async () => {
-    const response = await fetch(
-      `${import.meta.env.VITE_API_URL}api-token-auth/`,
-      {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(credentials),
-      }
-    );
-    return response.json();
-  };
+  //   setCredentials((prevCredentials) => ({ ...prevCredentials, [id]: value }));
+  // }; // this is an explicit return.
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (credentials.username && credentials.password) {
-      const { token } = await postData();
-      window.localStorage.setItem("token", token);
-      setLoggedIn(true);
-      navigate("/");
-    }
-  };
+  // const postData = async () => {
+  //   const response = await fetch(
+  //     `${import.meta.env.VITE_API_URL}api-token-auth/`,
+  //     // `${import.meta.env.VITE_API_URL}users/<int:pk>/`,
+  //     {
+  //       method: "post",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(credentials),
+  //     }
+  //   );
+  //   return response.json();
+  // };
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   if (credentials.username && credentials.password) {
+  //     const { token } = await postData();
+  //     if (token !== undefined) {
+  //       window.localStorage.setItem("token", token);
+  //       setLoggedIn(true);
+  //       navigate("/");
+  //     } else {
+  //       setLoggedIn(false);
+  //     }
+  //   }
+  // };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <h2>Log in</h2>
+    <form onSubmit={handleSubmit}>
       <div>
-        <label className="label" htmlFor="username">
-          Username:
-        </label>
+        <h1>Log In:</h1>
+        {/* <label htmlFor="username">Username:</label> */}
         <input
           type="text"
           id="username"
@@ -61,9 +62,7 @@ function LoginForm() {
         />
       </div>
       <div>
-        <label className="label" htmlFor="password">
-          Password:
-        </label>
+        {/* <label htmlFor="password">Password:</label> */}
         <input
           type="password"
           id="password"
@@ -71,11 +70,13 @@ function LoginForm() {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Login</button>
-      <p>
-        Don't have an account? Register <Link to="/sign-up">here</Link>.
-      </p>
+      <div>
+        <button className="project-button" type="submit">
+          Login
+        </button>
+      </div>
     </form>
   );
 }
+
 export default LoginForm;

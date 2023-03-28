@@ -1,12 +1,8 @@
-import '../App.css';
-import HeroSection from '../Components/HeroSection';
+import "../App.css";
+import HeroSection from "../Components/HeroSection";
 
 function Home() {
-    return (
-
-        <HeroSection />
-
-    );
+  return <HeroSection />;
 }
 
 export default Home;
