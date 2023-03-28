@@ -1,5 +1,8 @@
-import { useState } from "react";
+import React, { Component, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+
+import "./UserForm.css";
+
 
 function RegistrationForm() {
   const authToken = window.localStorage.getItem("token");
@@ -14,6 +17,10 @@ function RegistrationForm() {
     bio: "",
     skills: "",
   });
+
+const [showSkills, setShowSkills] = useState(false)
+
+
 
   const navigate = useNavigate();
   const { id } = useParams();
@@ -48,7 +55,7 @@ function RegistrationForm() {
   };
 
   return (
-    <div>
+    <main>
       <form className="form" onSubmit={handleSubmit}>
         <h2>Sign up</h2>
         <div>
@@ -124,20 +131,45 @@ function RegistrationForm() {
           />
         </div>
         <div>
-          <h3>Do you want to mentor? (Optional) </h3>
           <input
-            type="text"
-            id="skills"
-            placeholder="Enter skills"
-            onChange={handleChange}
+            type="radio"
+            name="mentor"
+            value="yes"
+            id="yes"
+            onChange={() => setShowSkills(true)}
           />
+          <label for="yes">Yes</label>
         </div>
+        <div>
+          <input
+            type="radio"
+            name="mentor"
+            value="no"
+            id="no"
+            onChange={() => setShowSkills(false)}
+          />
+          <label for="no">No</label>
+        </div>
+        {/* If show skills is true, then do what is in the brackets (otherwise, null = invisible) */}
+        {showSkills ? (
+          <div>
+            <div>
+              <input type="checkbox" name="skills" value="A" id="skill-a" />
+              <label for="skill-a">Skill A</label>
+            </div>
+            <div>
+              <input type="checkbox" name="skills" value="B" id="skill-b" />
+              <label for="skill-b">Skill B</label>
+            </div>
+          </div>
+        ) : null}
+
         <button type="submit">Create Account</button>
         <p>
           Already have an account? Login <Link to="/login">here</Link>.
         </p>
       </form>
-    </div>
+    </main>
   );
 }
 
