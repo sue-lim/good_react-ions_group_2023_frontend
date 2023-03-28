@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "./ProjectCard.css";
-import ProgressBar from "../ProgressBar/ProgressBar";
+// import ProgressBar from "../ProgressBar/ProgressBar";
 
 function ProjectCard(props) {
   const { projectData } = props;
@@ -17,7 +16,7 @@ function ProjectCard(props) {
   //     </div>
   //   );
   return (
-    <div>
+    <div className="project-card">
       <Link to="/project">
         <img src={projectData.image} />
         <h3>{projectData.title}</h3>

@@ -3,6 +3,7 @@ import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
 
 import { allProjects } from "../data";
+import EventCard from "../Components/EventCard/EventCard";
 
 function HeroSection() {
   //   const [projectList, setProjectList] = useState([]);
@@ -57,7 +58,7 @@ function HeroSection() {
         <div className="project-container">
           <div id="project-list">
             {allProjects.map((projectData, key) => {
-              return <div key={key}>{projectData.title}</div>;
+              return <EventCard key={key} projectData={projectData} />;
             })}
           </div>
         </div>
