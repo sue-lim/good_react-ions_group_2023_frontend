@@ -50,14 +50,14 @@ function LoginForm() {
   // };
 
   return (
-    <form>
+    <form className="form">
       <div>
         <h1>Log In:</h1>
-        {/* <label htmlFor="username">Username:</label> */}
+        <label htmlFor="username">Username:</label>
         <input type="text" id="username" placeholder="Enter username" />
       </div>
       <div>
-        {/* <label htmlFor="password">Password:</label> */}
+        <label htmlFor="password">Password:</label>
         <input type="password" id="password" placeholder="Password" />
       </div>
       <div>
