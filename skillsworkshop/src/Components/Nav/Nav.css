@@ -17,29 +17,6 @@
   margin-top: 5px;
 }
 
-/* #nav-list {
-  font-family: "League Spartan"; */
-
-/* border-bottom: 1px solid white;
-/* font-weight: 600;
-  font-size: 23px;
-  list-style: none;
-  width: 600px;
-  display: flex;
-  justify-content: space-around;
-  color: white;
-}
-
-#nav-list a:hover {
-  text-shadow: 2px 0 black;
-  color: #d9e2d5; */
-/* font-size: 24px;
-}
-
-.hamburger {
-  display: none;
-} */
-
 .bar {
   display: block;
   width: 25px;
@@ -49,84 +26,6 @@
   transition: all 0.3s ease-in-out;
   background-color: white;
 }
-
-/* .topnav {
-  overflow: hidden;
-  background-color: black;
-} */
-
-/* .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-} */
-
-/* .topnav a:hover {
-  background-color: #ddd;
-  color: black;
-} */
-
-/* .topnav .icon {
-  display: none;
-} */
-
-/* @media only screen and (max-width: 800px) {
-  #nav-list {
-    position: fixed;
-    left: -100%;
-    top: 5rem;
-    flex-direction: column;
-    background-color: #fff;
-    width: 100%;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-  } */
-/* 
-  #nav-list.active {
-    left: 0;
-  }
-
-  #nav-list a {
-    margin: 2.5rem 0;
-  } */
-
-/* .icon {
-    display: block;
-    cursor: pointer;
-  }
-
-  .icon.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .icon.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .icon.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  } */
-/* } */
 
 .topnav {
   position: fixed;
@@ -157,12 +56,6 @@
 }
 
 @media screen and (max-width: 900px) {
-  .topnav a {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 600px) {
   #nav-bar {
     display: block;
     height: 60px;
@@ -183,7 +76,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .topnav.responsive {
     position: relative;
   }
