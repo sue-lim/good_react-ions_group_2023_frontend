@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 150px;
 }
 
 .containerdetails {
@@ -61,7 +62,6 @@
 
 .profile {
     background-color: white;
-    margin-top: 90px;
 }
 
 .bioandskills {
