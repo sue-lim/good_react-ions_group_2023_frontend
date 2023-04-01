@@ -1,8 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Nav.css";
 
-function Nav() {
+function Nav(props) {
+  const { loggedIn, setLoggedIn } = props;
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    window.localStorage.removeItem("token");
+    setLoggedIn(false);
+    navigate(`/`);
+  };
+
   const myFunction = () => {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -22,15 +32,26 @@ function Nav() {
       </div>
       <div className="topnav" id="myTopnav">
         <a href="#" className="active"></a>
-        <Link className="nav-link" to="/login">
-          LOGIN
-        </Link>
-        <Link className="nav-link" to="/sign-up">
-          SIGN UP
-        </Link>
-        <Link className="nav-link" to="/create-event">
-          CREATE
-        </Link>
+        {!loggedIn && (
+          <Link className="nav-link" to="/login">
+            LOGIN
+          </Link>
+        )}
+        {loggedIn && (
+          <button className="nav-link" onClick={handleClick}>
+            LOGOUT
+          </button>
+        )}
+        {!loggedIn && (
+          <Link className="nav-link" to="/sign-up">
+            SIGN UP
+          </Link>
+        )}
+        {loggedIn && (
+          <Link className="nav-link" to="/create-event">
+            CREATE
+          </Link>
+        )}
         <Link className="nav-link" to="/#AboutUs">
           ABOUT
         </Link>

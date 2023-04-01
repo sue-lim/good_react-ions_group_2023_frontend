@@ -1,5 +1,5 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-// import { useState } from "react";
+import { useState } from "react";
 
 // Pages
 import SignupPage from "./Pages/SignupPage";
@@ -15,10 +15,14 @@ import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 const Layout = () => {
+  const [loggedIn, setLoggedIn] = useState(
+    window.localStorage.getItem("token") != null
+  );
+
   return (
     <div>
-      <Nav />
-      <Outlet />
+      <Nav loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+      <Outlet context={[loggedIn, setLoggedIn]} />
       <Footer />
     </div>
   );
