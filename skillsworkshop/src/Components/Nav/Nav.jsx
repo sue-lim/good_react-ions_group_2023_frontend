@@ -38,9 +38,9 @@ function Nav(props) {
           </Link>
         )}
         {loggedIn && (
-          <button className="nav-link" onClick={handleClick}>
+          <a href="/" className="nav-link" onClick={handleClick}>
             LOGOUT
-          </button>
+          </a>
         )}
         {!loggedIn && (
           <Link className="nav-link" to="/sign-up">
