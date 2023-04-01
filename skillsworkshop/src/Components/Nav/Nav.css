@@ -55,6 +55,10 @@
   display: none;
 }
 
+.icon {
+  margin-right: 30px;
+}
+
 @media screen and (max-width: 900px) {
   #nav-bar {
     display: block;
