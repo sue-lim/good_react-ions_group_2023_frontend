@@ -58,12 +58,10 @@
     box-sizing: border-box;
 }
 
-.containerbioskills {
-    background-color: white;
-}
 
 .profile {
     background-color: white;
+    margin-top: 90px;
 }
 
 .bioandskills {
@@ -72,4 +70,8 @@
     margin-left: 20%;
     margin-right: 20%;
 
+}
+
+.userpage {
+    height: 100vh;
 }

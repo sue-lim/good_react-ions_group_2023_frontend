@@ -19,7 +19,7 @@ function UserProfile() {
     }, []);
 
     return (
-        <div>
+        <div className="userpage">
 
             <img className="project-card-img" src={userData.profile_picture} />
             <h3 className="project-card-name">{userData.username}</h3>
