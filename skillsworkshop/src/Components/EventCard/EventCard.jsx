@@ -25,5 +25,3 @@ function ProjectCard(props) {
     </div>
   );
 }
-
-export default ProjectCard;
