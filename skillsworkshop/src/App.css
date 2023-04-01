@@ -11,32 +11,6 @@
   color: white;
 }
 
-.signup-container {
-  background-color: #d9e2d5;
-  height: 50%;
-  width: 50%;
-}
-
-.form {
-  /* margin-top: 90px; */
-  width: 100%;
-  padding: 40px;
-  padding-top: 130px;
-  border-radius: 5px;
-  /* background-color: #d9e2d5; */
-  text-align: center;
-  height: 95vh;
-}
-
-input {
-  height: 30px;
-  padding: 20px;
-}
-
-form div {
-  height: 60px;
-}
-
 a.here-link {
   color: #3e6765;
 }
