@@ -7,8 +7,16 @@ function UserProfile() {
 
     const { id } = useParams()
 
+    const getToken = localStorage.getItem("token")
+    console.log(getToken)
+
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}users/${id}/`)
+        fetch(`${import.meta.env.VITE_API_URL}users/${id}/`, {
+            headers: {
+                Authentication: `Bearer ${getToken}`,
+                'Access-control-allow-origin': '*'
+            }
+        })
 
             .then((results) => {
                 return results.json();
