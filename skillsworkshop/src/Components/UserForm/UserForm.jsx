@@ -42,7 +42,7 @@ function RegistrationForm() {
           },
           body: JSON.stringify(users),
         });
-        navigate(`/project`);
+        navigate(`/`);
       } catch (err) {
         console.error(err);
       }
