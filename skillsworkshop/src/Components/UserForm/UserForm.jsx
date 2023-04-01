@@ -3,7 +3,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 import "./UserForm.css";
 
-
 function RegistrationForm() {
   const authToken = window.localStorage.getItem("token");
   const [users, setUsers] = useState({
@@ -18,9 +17,7 @@ function RegistrationForm() {
     skills: "",
   });
 
-const [showSkills, setShowSkills] = useState(false)
-
-
+  const [showSkills, setShowSkills] = useState(false);
 
   const navigate = useNavigate();
   const { id } = useParams();
@@ -58,8 +55,31 @@ const [showSkills, setShowSkills] = useState(false)
     <main>
       <form className="form" onSubmit={handleSubmit}>
         <h2>Sign up</h2>
-        <div>
-          <label htmlFor="username">Username:</label>
+        <p>
+          Already have an account? Login <Link to="/login">here</Link>.
+        </p>
+        <div className="text-input-row">
+          <div className="text-input-row-name">
+            <label htmlFor="first_name">First name</label>
+            <input
+              type="text"
+              id="first_name"
+              placeholder="Enter first name"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="text-input-row-name">
+            <label htmlFor="last_name">Last name</label>
+            <input
+              type="text"
+              id="last_name"
+              placeholder="Enter last name"
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+        <div className="text-input-row">
+          <label htmlFor="username">Username</label>
           <input
             type="text"
             id="username"
@@ -67,34 +87,7 @@ const [showSkills, setShowSkills] = useState(false)
             onChange={handleChange}
           />
         </div>
-        <div>
-          <label htmlFor="first_name">First name:</label>
-          <input
-            type="text"
-            id="first_name"
-            placeholder="Enter first name"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="last_name">Last name:</label>
-          <input
-            type="text"
-            id="last_name"
-            placeholder="Enter last name"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Your email here"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
+        <div className="text-input-row">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -103,7 +96,16 @@ const [showSkills, setShowSkills] = useState(false)
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className="text-input-row">
+          <label htmlFor="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="text-input-row">
           <label htmlFor="location">Location:</label>
           <input
             type="text"
@@ -112,62 +114,183 @@ const [showSkills, setShowSkills] = useState(false)
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className="text-input-row">
           <label htmlFor="avatar">Avatar image URL:</label>
           <input
-            type="text"
+            type="URL"
             id="avatar"
-            placeholder="Enter avatar image URL"
+            placeholder="https://example.com/"
             onChange={handleChange}
           />
         </div>
         <div>
           <label htmlFor="bio">Bio:</label>
           <input
-            type="text"
+            type="message"
+            class="input-bio"
             id="bio"
             placeholder="Enter bio"
             onChange={handleChange}
           />
         </div>
-        <div>
-          <input
-            type="radio"
-            name="mentor"
-            value="yes"
-            id="yes"
-            onChange={() => setShowSkills(true)}
-          />
-          <label for="yes">Yes</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            name="mentor"
-            value="no"
-            id="no"
-            onChange={() => setShowSkills(false)}
-          />
-          <label for="no">No</label>
-        </div>
-        {/* If show skills is true, then do what is in the brackets (otherwise, null = invisible) */}
-        {showSkills ? (
+        <div className="skills-input">
           <div>
             <div>
-              <input type="checkbox" name="skills" value="A" id="skill-a" />
-              <label for="skill-a">Skill A</label>
+              <h3> Select the skills you'd like to learn: </h3>
             </div>
             <div>
-              <input type="checkbox" name="skills" value="B" id="skill-b" />
-              <label for="skill-b">Skill B</label>
+              <input
+                type="checkbox"
+                name="skills"
+                value="skill-ai-robotics"
+                id="skill-ai-robotics"
+              />
+              <label for="skill-ai-robotics">AI & Robotics</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="skills"
+                value="skill-cloud-devops"
+                id="skill-cloud-devops"
+              />
+              <label for="skill-cloud-devops">Cloud & DevOps</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="skills"
+                value="skill-cyber-security"
+                id="skill-cyber-security"
+              />
+              <label for="skill-cyber-security">Cyber Security</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="skills"
+                value="skill-design-architecture"
+                id="skill-design-architecture"
+              />
+              <label for="skill-design-architecture">
+                Design & Architecture
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="skills"
+                value="skill-project-management"
+                id="skill-project-management"
+              />
+              <label for="skill-project-management">Project Management</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="skills"
+                value="skill-software-development"
+                id="skill-software-development"
+              />
+              <label for="skill-software-development">
+                Software Development
+              </label>
             </div>
           </div>
-        ) : null}
-
+          <div>
+            <h3> Would you like to mentor? (Optional) </h3>
+          </div>
+          <div className="radio">
+            <div className="radio-button">
+              <input
+                type="radio"
+                name="mentor"
+                value="yes"
+                id="yes"
+                onChange={() => setShowSkills(true)}
+              />
+              <label for="yes">Yes</label>
+            </div>
+            <div className="radio-button">
+              <input
+                type="radio"
+                name="mentor"
+                value="no"
+                id="no"
+                onChange={() => setShowSkills(false)}
+              />
+              <label for="no">No</label>
+            </div>
+          </div>
+          {/* If show skills is true, then do what is in the brackets (otherwise, null = invisible) */}
+          {showSkills ? (
+            <div>
+              <div>
+                <h3> Select the skills you'd like to teach: </h3>
+              </div>
+              <div>
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="skills"
+                  value="skill-ai-robotics"
+                  id="skill-ai-robotics"
+                />
+                <label for="skill-ai-robotics">AI & Robotics</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="skills"
+                  value="skill-cloud-devops"
+                  id="skill-cloud-devops"
+                />
+                <label for="skill-cloud-devops">Cloud & DevOps</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="skills"
+                  value="skill-cyber-security"
+                  id="skill-cyber-security"
+                />
+                <label for="skill-cyber-security">Cyber Security</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="skills"
+                  value="skill-design-architecture"
+                  id="skill-design-architecture"
+                />
+                <label for="skill-design-architecture">
+                  Design & Architecture
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="skills"
+                  value="skill-project-management"
+                  id="skill-project-management"
+                />
+                <label for="skill-project-management">Project Management</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="skills"
+                  value="skill-software-development"
+                  id="skill-software-development"
+                />
+                <label for="skill-software-development">
+                  Software Development
+                </label>
+              </div>
+            </div>
+          ) : null}
+        </div>
         <button type="submit">Create Account</button>
-        <p>
-          Already have an account? Login <Link to="/login">here</Link>.
-        </p>
       </form>
     </main>
   );
