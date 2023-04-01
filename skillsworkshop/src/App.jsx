@@ -5,6 +5,7 @@ import { useState } from "react";
 import SignupPage from "./Pages/SignupPage";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./Pages/HomePage";
+import Profile from "./Pages/UserProfile";
 import CreateEventPage from "./Pages/CreateEventPage";
 
 // Components
@@ -35,6 +36,8 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/sign-up", element: <SignupPage /> },
+      { path: "/users/:id", element: <Profile /> },
+      // { path: "/events/:id", element: <EventDetails/>},
       { path: "/create-event", element: <CreateEventPage /> },
     ],
   },
