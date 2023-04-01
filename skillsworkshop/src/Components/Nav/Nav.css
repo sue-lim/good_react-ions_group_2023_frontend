@@ -4,7 +4,6 @@
 #nav-bar {
   font-family: "League Spartan", "Arial";
   position: fixed;
-  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
