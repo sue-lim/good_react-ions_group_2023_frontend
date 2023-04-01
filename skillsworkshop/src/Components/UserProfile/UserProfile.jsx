@@ -21,14 +21,11 @@ function UserProfile() {
     return (
         <div className="userpage">
 
-            <img className="project-card-img" src={userData.profile_picture} />
-            <h3 className="project-card-name">{userData.username}</h3>
-
             <div className="profile">
                 <div className="containerprofile">
                     <img className="userphoto" src={userData.profile_picture} alt="User Photo"></img>
                     <div className="userdetails">
-                        <h1 className="title">{userData.first_name} {userData.last_name}</h1>
+                        <h1 className="title">{userData.first_name}</h1>
                         <div className="containerdetails">
                             <img className="icon" src="https://i.postimg.cc/W1VnDdts/email.png"></img>
                             <p className="details">{userData.email}</p>
