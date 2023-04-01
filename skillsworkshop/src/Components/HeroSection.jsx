@@ -70,9 +70,9 @@ function HeroSection() {
         <h1 className="title">Upcoming events</h1>
         <div className="project-container">
           <div id="project-list">
-            {/* {workshopList.map((data, key) => {
-              return <EventCard key={key} workshopList={data} />;
-            })} */}
+            {workshopList.map((projectData, key) => {
+              return <EventCard key={key} projectData={projectData} />;
+            })}
           </div>
         </div>
       </div>

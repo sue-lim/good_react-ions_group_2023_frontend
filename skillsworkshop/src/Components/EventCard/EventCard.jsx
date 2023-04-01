@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function ProjectCard(props) {
-  const { workshop } = props;
+  const { projectData } = props;
 
   return (
     <div className="project-card">
-      <Link to="/">
-        <img src={workshop.image} />
+      <Link to={`/events/${projectData.id}`}>
+        <img src={projectData.image} />
       </Link>
-      <h3>{workshop.event_title}</h3>
-      <button type="submit">Click to view</button>
+      <h3>{projectData.event_title}</h3>
+      {/* <button type="submit">Click to view</button> */}
     </div>
   );
 }
