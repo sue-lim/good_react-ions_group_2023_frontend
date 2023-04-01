@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./EventForm.css";
+// import "./EventForm.css";
 
 function EventForm() {
   const [workshop, setWorkshop] = useState({
+    topic: null,
     event_title: "",
     description: "",
     datetime: null,
@@ -11,6 +12,7 @@ function EventForm() {
     max_participants: "",
     image: "",
     is_open: false,
+    organizer: null,
   });
 
   const navigate = useNavigate();
@@ -56,10 +58,20 @@ function EventForm() {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h1>Create A Workshop</h1>
-      {/* <div>
+      <div>
         <label htmlFor="topic">Topic:</label>
-        <input type="text" id="topic" placeholder="Select a topic" />
-      </div> */}
+        <select id="topic" onChange={handleChange}>
+          <option disabled selected="true">
+            -- Select a Topic --
+          </option>
+          <option value="AI & Robotics">AI & Robotics</option>
+          <option value="Cloud & DevOps">Cloud & DevOps</option>
+          <option value="Cyber Security">Cyber Security</option>
+          <option value="Design & Architecture">Design & Architecture</option>
+          <option value="Project Management">Project Management</option>
+          <option value="Software Development">Software Development</option>
+        </select>
+      </div>
       <div>
         <label htmlFor="event_title">Title:</label>
         <input

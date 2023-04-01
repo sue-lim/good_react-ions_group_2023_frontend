@@ -1,37 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
 
-import { allProjects } from "../data";
-// import EventCard from "../Components/EventCard/EventCard";
+import { useParams } from "react-router-dom";
+
+// import { allProjects } from "../data";
+import EventCard from "../Components/EventCard/EventCard";
 
 function HeroSection() {
+  const [workshopList, setWorkshopList] = useState([]);
   //   const [projectList, setProjectList] = useState([]);
   //   // const [user, setUser] = useState([]);
 
-  //   // const { id } = useParams();
+  const { id } = useParams();
 
-  //   useEffect(() => {
-  //     fetch(`${import.meta.env.VITE_API_URL}projects`) // making network request to url
-  //       .then((results) => {
-  //         return results.json();
-  //       })
-  //       .then((data) => {
-  //         setProjectList(data);
-  //       });
-  //   }, []);
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}events/`) // making network request to url
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        // console.log(data);
+        setWorkshopList(data);
+      });
+  }, []);
 
-  //   function compare(a, b) {
-  //     if (a.date_created < b.date_created) {
-  //       return 1;
-  //     }
-  //     if (a.date_created > b.date_created) {
-  //       return -1;
-  //     }
-  //     return 0;
-  //   }
+  function compare(a, b) {
+    if (a.date_created < b.date_created) {
+      return 1;
+    }
+    if (a.date_created > b.date_created) {
+      return -1;
+    }
+    return 0;
+  }
 
-  //   const latestProject = projectList.sort(compare).slice(0, 3);
+  const latestWorkshops = workshopList.sort(compare).slice(0, 3);
 
   return (
     <div>
@@ -66,8 +70,8 @@ function HeroSection() {
         <h1 className="title">Upcoming events</h1>
         <div className="project-container">
           <div id="project-list">
-            {/* {allProjects.map((projectData, key) => {
-              return <EventCard key={key} projectData={projectData} />;
+            {/* {workshopList.map((data, key) => {
+              return <EventCard key={key} workshopList={data} />;
             })} */}
           </div>
         </div>

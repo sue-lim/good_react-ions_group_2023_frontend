@@ -3,20 +3,16 @@ import { Link } from "react-router-dom";
 
 import EventCard from "../Components/EventCard/EventCard";
 
-function AllEventsPage() {
-  const [workshopList, setWorkshopList] = useState([]);
+function AllEventsPage(props) {
+  const { workshopList, setWorkshopList } = props;
 
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}events`) // making network request to url
-      .then((results) => {
-        return results.json();
-      })
-      .then((data) => {
-        setWorkshopList(data);
-      });
-  }, []);
-
-  return <div id="project-list">{workshopList.map()}</div>;
+  return (
+    <div id="project-list">
+      {/* {workshopList.map((workshop, key) => {
+        return <EventCard key={key} workshopList={workshop} />;
+      })} */}
+    </div>
+  );
 }
 
 export default AllEventsPage;
