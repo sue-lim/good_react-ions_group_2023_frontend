@@ -69,7 +69,7 @@ function HeroSection() {
 
       <div className="profile">
         <div className="containerprofile">
-          <img className="userphoto" src="public\pssmile_SheCodesPortraits2023-2.jpg" alt="User Photo"></img>
+          <img className="userphoto" src="public/pssmile_SheCodesPortraits2023-2.jpg" alt="User Photo"></img>
           <div className="userdetails">
             <h1 className="title">Kaye Dante</h1>
             <div className="containerdetails">

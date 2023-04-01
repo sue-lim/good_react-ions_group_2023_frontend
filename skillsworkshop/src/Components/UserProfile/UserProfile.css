@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
+}
+
+/*User Profile*/
+.userphoto {
+    border-radius: 50%;
+    background: #3e6765;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.containerprofile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerdetails {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.userdetails {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.skillscontainer {
+    margin: 20px;
+    padding-top: 20px;
+    background-color: #D9E2D5;
+    text-align: center;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.biocontainer {
+    margin: 20px;
+    padding-top: 20px;
+    background-color: #D9E2D5;
+    text-align: center;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.containerbioskills {
+    background-color: white;
+}
+
+.profile {
+    background-color: white;
+}
+
+.bioandskills {
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}

@@ -30,10 +30,11 @@ function UserProfile() {
                     <div className="userdetails">
                         <h1 className="title">{userData.first_name} {userData.last_name}</h1>
                         <div className="containerdetails">
-                            <img className="icon" src="skillsworkshop\public\email.png"></img><p className="details">{userData.email}</p>
+                            <img className="icon" src="https://i.postimg.cc/W1VnDdts/email.png"></img>
+                            <p className="details">{userData.email}</p>
                         </div>
                         <div className="containerdetails">
-                            <img className="icon" src="public/location.png"></img><p className="details">{userData.location}</p>
+                            <img className="icon" src="https://i.postimg.cc/JzRNrSdn/location.png"></img><p className="details">{userData.location}</p>
                         </div>
                     </div>
                 </div>
