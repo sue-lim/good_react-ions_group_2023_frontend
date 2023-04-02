@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
 
