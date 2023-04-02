@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
 
@@ -42,10 +42,13 @@ function HeroSection() {
         <h1 className="today">Learning Today,</h1>
         <h2 className="tomorrow">Leading Tomorrow.</h2>
         <p className="start"> Start your learning journey today!</p>
-        <button className="GetStartedBtn"> Get Started </button>
+        <a href="/events" className="GetStartedBtn">
+          {" "}
+          Get Started{" "}
+        </a>
       </div>
       <div className="containerabout">
-        <div id="AboutUs">
+        <div className="aboutUs">
           <h1 className="title">Our Mission</h1>
           <p className="AboutUsTxt">
             {" "}
@@ -66,7 +69,6 @@ function HeroSection() {
       </div>
       <div className="containerevents">
         <h1 className="title">Upcoming events</h1>
-        <a href="/events">View all upcoming Workshops</a>
         <div className="project-container">
           <div id="project-list">
             {latestWorkshops.map((projectData, key) => {

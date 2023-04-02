@@ -52,8 +52,8 @@ function Nav(props) {
             CREATE
           </Link>
         )}
-        <Link className="nav-link" to="/#AboutUs">
-          ABOUT
+        <Link to="/events" className="nav-link">
+          EVENTS
         </Link>
         <Link className="nav-link" to="/">
           HOME
