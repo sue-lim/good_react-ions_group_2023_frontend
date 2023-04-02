@@ -9,8 +9,6 @@ import EventCard from "../Components/EventCard/EventCard";
 
 function HeroSection() {
   const [workshopList, setWorkshopList] = useState([]);
-  //   const [projectList, setProjectList] = useState([]);
-  //   // const [user, setUser] = useState([]);
 
   const { id } = useParams();
 
@@ -51,7 +49,9 @@ function HeroSection() {
           <h1 className="title">Our Mission</h1>
           <p className="AboutUsTxt">
             {" "}
-            We want to connect Mentors, Mentees, and Organisations within the Tech Industry to help individuals develop technical and non-technical skills.
+            We want to connect Mentors, Mentees, and Organisations within the
+            Tech Industry to help individuals develop technical and
+            non-technical skills.
           </p>
           <p className="AboutUsTxt">
             {" "}
@@ -66,16 +66,15 @@ function HeroSection() {
       </div>
       <div className="containerevents">
         <h1 className="title">Upcoming events</h1>
+        <a href="/events">View all upcoming Workshops</a>
         <div className="project-container">
           <div id="project-list">
-            {workshopList.map((projectData, key) => {
+            {latestWorkshops.map((projectData, key) => {
               return <EventCard key={key} projectData={projectData} />;
             })}
           </div>
         </div>
       </div>
-
-
     </div>
   );
 }
