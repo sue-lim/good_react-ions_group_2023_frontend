@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import EventCard from "../Components/EventCard/EventCard";
 
 function AllEventsPage(props) {
-  const { workshopList, setWorkshopList } = props;
+  const { workshopList, setWorkshopList, projectData } = props;
 
   return (
     <div id="project-list">
-      {/* {workshopList.map((workshop, key) => {
-        return <EventCard key={key} workshopList={workshop} />;
-      })} */}
+      {workshopList.map((projectData, key) => {
+        return <EventCard key={key} projectData={projectData} />;
+      })}
     </div>
   );
 }
