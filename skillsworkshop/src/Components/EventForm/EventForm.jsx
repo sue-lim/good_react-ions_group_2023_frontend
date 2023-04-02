@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import "./EventForm.css";
 
@@ -14,6 +14,19 @@ function EventForm() {
     is_open: false,
     organizer: null,
   });
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}users/`) // making network request to url
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setUsers(data);
+      });
+  }, []);
 
   const navigate = useNavigate();
 
@@ -58,6 +71,14 @@ function EventForm() {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h1>Create A Workshop</h1>
+      <div>
+        <label htmlFor="organizer">Organizer:</label>
+        <select id="organizer" onChange={handleChange}>
+          {users.map((users, pk) => {
+            return <option value={pk}>{users.username}</option>;
+          })}
+        </select>
+      </div>
       <div>
         <label htmlFor="topic">Topic:</label>
         <select id="topic" onChange={handleChange}>
