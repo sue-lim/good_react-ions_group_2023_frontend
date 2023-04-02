@@ -9,7 +9,10 @@ function ProjectCard(props) {
       <Link to={`/events/${projectData.id}`}>
         <img src={projectData.image} />
       </Link>
-      <h3>{projectData.event_title}</h3>
+      <div className="event-details">
+        <h3>{projectData.event_title}</h3>
+        <p>{projectData.location}</p>
+      </div>
       {/* <button type="submit">Click to view</button> */}
     </div>
   );
