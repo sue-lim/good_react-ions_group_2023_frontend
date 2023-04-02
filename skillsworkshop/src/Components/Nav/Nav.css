@@ -41,7 +41,7 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  margin: 14px 16px;
   text-decoration: none;
   font-size: 26px;
   font-weight: 600;
@@ -72,12 +72,20 @@
     margin-top: 5px;
   }
 
+  a.active {
+    margin-top: 60px;
+  }
+
   .topnav a {
     display: none;
   }
   .topnav a.icon {
     float: right;
     display: block;
+  }
+
+  a.icon {
+    margin-right: 20px;
   }
 }
 
