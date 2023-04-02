@@ -6,7 +6,6 @@ import "./UserForm.css";
 function RegistrationForm() {
   const authToken = window.localStorage.getItem("token");
   const [users, setUsers] = useState({
-    id: "",
     username: "",
     bio: "",
     phone_number: "",
@@ -15,20 +14,13 @@ function RegistrationForm() {
     email: "",
     location: "",
     profile_picture: "",
+    password: "",
+    password2: "",
     is_mentor: false,
     is_mentee: true,
     is_private: false,
-    last_login: "",
-    is_superuser: "",
-    is_staff: "",
-    is_active: "",
-    date_joined: "",
-    skills: "",
-    interest: "",
-    groups: "",
-    user_permissions: "",
-    password: "",
-    password2:"",
+    skills: null,
+    interest: null,
   });
 
   const [showSkills, setShowSkills] = useState(false);
@@ -56,7 +48,7 @@ function RegistrationForm() {
           },
           body: JSON.stringify(users),
         });
-        navigate(`/`);
+        navigate(`/events`);
       } catch (err) {
         console.error(err);
       }
@@ -176,8 +168,9 @@ function RegistrationForm() {
                 name="interest"
                 value="skill-ai-robotics"
                 id="skill-ai-robotics"
+                onChange={handleChange}
               />
-              <label htmlFor="skill-ai-robotics">AI & Robotics</label>
+              <label htmlFor="interest">AI & Robotics</label>
             </div>
             <div>
               <input
@@ -185,17 +178,19 @@ function RegistrationForm() {
                 name="interest"
                 value="skill-cloud-devops"
                 id="skill-cloud-devops"
+                onChange={handleChange}
               />
-              <label htmlFor="skill-cloud-devops">Cloud & DevOps</label>
+              <label htmlFor="interest">Cloud & DevOps</label>
             </div>
             <div>
               <input
                 type="checkbox"
                 name="interest"
                 value="skill-cyber-security"
-                id="skill-cyber-security"
+                id="skills"
+                onChange={handleChange}
               />
-              <label htmlFor="skill-cyber-security">Cyber Security</label>
+              <label htmlFor="interest">Cyber Security</label>
             </div>
             <div>
               <input
@@ -203,10 +198,9 @@ function RegistrationForm() {
                 name="interest"
                 value="skill-design-architecture"
                 id="skill-design-architecture"
+                onChange={handleChange}
               />
-              <label htmlFor="skill-design-architecture">
-                Design & Architecture
-              </label>
+              <label htmlFor="interest">Design & Architecture</label>
             </div>
             <div>
               <input
@@ -214,10 +208,9 @@ function RegistrationForm() {
                 name="interest"
                 value="skill-project-management"
                 id="skill-project-management"
+                onChange={handleChange}
               />
-              <label htmlFor="skill-project-management">
-                Project Management
-              </label>
+              <label htmlFor="interest">Project Management</label>
             </div>
             <div>
               <input
@@ -225,10 +218,9 @@ function RegistrationForm() {
                 name="interest"
                 value="skill-software-development"
                 id="skill-software-development"
+                onChange={handleChange}
               />
-              <label htmlFor="skill-software-development">
-                Software Development
-              </label>
+              <label htmlFor="interest">Software Development</label>
             </div>
           </div>
           <div>
@@ -239,21 +231,21 @@ function RegistrationForm() {
               <input
                 type="radio"
                 name="mentor"
-                value="yes"
+                value="true"
                 id="yes"
                 onChange={() => setShowSkills(true)}
               />
-              <label htmlFor="yes">Yes</label>
+              <label htmlFor="is_mentor">Yes</label>
             </div>
             <div className="radio-button">
               <input
                 type="radio"
                 name="mentor"
-                value="no"
+                value="false"
                 id="no"
                 onChange={() => setShowSkills(false)}
               />
-              <label htmlFor="no">No</label>
+              <label htmlFor="is_mentor">No</label>
             </div>
           </div>
           {showSkills ? (
@@ -267,8 +259,9 @@ function RegistrationForm() {
                   name="skills"
                   value="skill-ai-robotics"
                   id="skill-ai-robotics"
+                  onChange={handleChange}
                 />
-                <label htmlFor="skill-ai-robotics">AI & Robotics</label>
+                <label htmlFor="skills">AI & Robotics</label>
               </div>
               <div>
                 <input
@@ -276,8 +269,9 @@ function RegistrationForm() {
                   name="skills"
                   value="skill-cloud-devops"
                   id="skill-cloud-devops"
+                  onChange={handleChange}
                 />
-                <label htmlFor="skill-cloud-devops">Cloud & DevOps</label>
+                <label htmlFor="skills">Cloud & DevOps</label>
               </div>
               <div>
                 <input
@@ -285,8 +279,9 @@ function RegistrationForm() {
                   name="skills"
                   value="skill-cyber-security"
                   id="skill-cyber-security"
+                  onChange={handleChange}
                 />
-                <label htmlFor="skill-cyber-security">Cyber Security</label>
+                <label htmlFor="skills">Cyber Security</label>
               </div>
               <div>
                 <input
@@ -294,10 +289,9 @@ function RegistrationForm() {
                   name="skills"
                   value="skill-design-architecture"
                   id="skill-design-architecture"
+                  onChange={handleChange}
                 />
-                <label htmlFor="skill-design-architecture">
-                  Design & Architecture
-                </label>
+                <label htmlFor="skills">Design & Architecture</label>
               </div>
               <div>
                 <input
@@ -305,10 +299,9 @@ function RegistrationForm() {
                   name="skills"
                   value="skill-project-management"
                   id="skill-project-management"
+                  onChange={handleChange}
                 />
-                <label htmlFor="skill-project-management">
-                  Project Management
-                </label>
+                <label htmlFor="skills">Project Management</label>
               </div>
               <div>
                 <input
@@ -316,10 +309,9 @@ function RegistrationForm() {
                   name="skills"
                   value="skill-software-development"
                   id="skill-software-development"
+                  onChange={handleChange}
                 />
-                <label htmlFor="skill-software-development">
-                  Software Development
-                </label>
+                <label htmlFor="skills">Software Development</label>
               </div>
             </div>
           ) : null}
