@@ -39,23 +39,30 @@
 }
 
 .skillscontainer {
-    margin: 20px;
-    padding-top: 20px;
-    background-color: #D9E2D5;
-    text-align: center;
+    text-align: left;
     border-radius: 20px;
-    padding: 40px;
-    box-sizing: border-box;
+    padding-left: 35px;
+    padding-right: 30px;
+    padding-top: 20px;
+    width: 200px;
+    height: auto;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 20px;
+
 }
 
 .biocontainer {
-    margin: 20px;
+    text-align: left;
+    border-radius: 15px 50px;
+    padding-left: 35px;
+    padding-right: 30px;
     padding-top: 20px;
-    background-color: #D9E2D5;
-    text-align: center;
-    border-radius: 20px;
-    padding: 40px;
-    box-sizing: border-box;
+    width: 450px;
+    height: auto;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 20px;
 }
 
 
@@ -63,14 +70,30 @@
     background-color: white;
 }
 
-.bioandskills {
+/* .bioandskills {
     display: flex;
     justify-content: center;
-    margin-left: 20%;
-    margin-right: 20%;
 
-}
+} */
 
 .userpage {
     height: 100vh;
+}
+
+.user_titles {
+    color: #4e2780;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: "Barlow", sans-serif;
+    margin-bottom: 15px;
+}
+
+.user_name {
+    color: #4e2780;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: "Barlow", sans-serif;
+    margin-bottom: 20px;
 }
