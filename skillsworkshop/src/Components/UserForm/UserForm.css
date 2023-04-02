@@ -19,9 +19,11 @@ h2 {
 }
 
 input,
-label {
-  display: inline-block;
-  width: 100%;
+label,
+select {
+  display: block;
+  margin: auto;
+  width: 290px;
   padding: 10px;
 }
 
@@ -31,7 +33,12 @@ label {
   padding: 40px;
   border-radius: 5px;
   background-color: #d9e2d5;
+  display: block;
+  justify-content: center;
   text-align: center;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 100px;
 }
 
 .input-bio {

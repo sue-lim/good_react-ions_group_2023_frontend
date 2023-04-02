@@ -51,8 +51,8 @@ function LoginForm() {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+      <h1>Log In:</h1>
       <div>
-        <h1>Log In:</h1>
         <label htmlFor="username">Username:</label>
         <input
           type="text"
