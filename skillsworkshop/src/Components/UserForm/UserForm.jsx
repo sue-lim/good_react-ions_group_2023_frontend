@@ -6,15 +6,29 @@ import "./UserForm.css";
 function RegistrationForm() {
   const authToken = window.localStorage.getItem("token");
   const [users, setUsers] = useState({
+    id: "",
     username: "",
+    bio: "",
+    phone_number: "",
     first_name: "",
     last_name: "",
     email: "",
-    password: "",
     location: "",
-    avatar: "",
-    bio: "",
+    profile_picture: "",
+    is_mentor: false,
+    is_mentee: true,
+    is_private: false,
+    last_login: "",
+    is_superuser: "",
+    is_staff: "",
+    is_active: "",
+    date_joined: "",
     skills: "",
+    interest: "",
+    groups: "",
+    user_permissions: "",
+    password: "",
+    password2:"",
   });
 
   const [showSkills, setShowSkills] = useState(false);
@@ -97,6 +111,15 @@ function RegistrationForm() {
           />
         </div>
         <div className="text-input-row">
+          <label htmlFor="password2">Re-enter your password:</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Re-enter password"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="text-input-row">
           <label htmlFor="email">Email:</label>
           <input
             type="text"
@@ -106,20 +129,29 @@ function RegistrationForm() {
           />
         </div>
         <div className="text-input-row">
-          <label htmlFor="location">Location:</label>
+          <label htmlFor="phone_number">Phone:</label>
           <input
             type="text"
-            id="location"
-            placeholder="Enter location"
+            id="phone_number"
+            placeholder="Enter phone number"
             onChange={handleChange}
           />
         </div>
         <div className="text-input-row">
-          <label htmlFor="avatar">Avatar image URL:</label>
+          <label htmlFor="location">Location:</label>
+          <input
+            type="text"
+            id="location"
+            placeholder="Example: 'Perth, Australia'"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="text-input-row">
+          <label htmlFor="profile_photo">Avatar image URL:</label>
           <input
             type="URL"
-            id="avatar"
-            placeholder="https://example.com/"
+            id="profile_photo"
+            placeholder="Example: 'https://example.com/'"
             onChange={handleChange}
           />
         </div>
@@ -127,7 +159,7 @@ function RegistrationForm() {
           <label htmlFor="bio">Bio:</label>
           <input
             type="message"
-            class="input-bio"
+            className="input-bio"
             id="bio"
             placeholder="Enter bio"
             onChange={handleChange}
@@ -141,58 +173,60 @@ function RegistrationForm() {
             <div>
               <input
                 type="checkbox"
-                name="skills"
+                name="interest"
                 value="skill-ai-robotics"
                 id="skill-ai-robotics"
               />
-              <label for="skill-ai-robotics">AI & Robotics</label>
+              <label htmlFor="skill-ai-robotics">AI & Robotics</label>
             </div>
             <div>
               <input
                 type="checkbox"
-                name="skills"
+                name="interest"
                 value="skill-cloud-devops"
                 id="skill-cloud-devops"
               />
-              <label for="skill-cloud-devops">Cloud & DevOps</label>
+              <label htmlFor="skill-cloud-devops">Cloud & DevOps</label>
             </div>
             <div>
               <input
                 type="checkbox"
-                name="skills"
+                name="interest"
                 value="skill-cyber-security"
                 id="skill-cyber-security"
               />
-              <label for="skill-cyber-security">Cyber Security</label>
+              <label htmlFor="skill-cyber-security">Cyber Security</label>
             </div>
             <div>
               <input
                 type="checkbox"
-                name="skills"
+                name="interest"
                 value="skill-design-architecture"
                 id="skill-design-architecture"
               />
-              <label for="skill-design-architecture">
+              <label htmlFor="skill-design-architecture">
                 Design & Architecture
               </label>
             </div>
             <div>
               <input
                 type="checkbox"
-                name="skills"
+                name="interest"
                 value="skill-project-management"
                 id="skill-project-management"
               />
-              <label for="skill-project-management">Project Management</label>
+              <label htmlFor="skill-project-management">
+                Project Management
+              </label>
             </div>
             <div>
               <input
                 type="checkbox"
-                name="skills"
+                name="interest"
                 value="skill-software-development"
                 id="skill-software-development"
               />
-              <label for="skill-software-development">
+              <label htmlFor="skill-software-development">
                 Software Development
               </label>
             </div>
@@ -209,7 +243,7 @@ function RegistrationForm() {
                 id="yes"
                 onChange={() => setShowSkills(true)}
               />
-              <label for="yes">Yes</label>
+              <label htmlFor="yes">Yes</label>
             </div>
             <div className="radio-button">
               <input
@@ -219,10 +253,9 @@ function RegistrationForm() {
                 id="no"
                 onChange={() => setShowSkills(false)}
               />
-              <label for="no">No</label>
+              <label htmlFor="no">No</label>
             </div>
           </div>
-          {/* If show skills is true, then do what is in the brackets (otherwise, null = invisible) */}
           {showSkills ? (
             <div>
               <div>
@@ -230,13 +263,12 @@ function RegistrationForm() {
               </div>
               <div>
                 <input
-                  class="checkbox"
                   type="checkbox"
                   name="skills"
                   value="skill-ai-robotics"
                   id="skill-ai-robotics"
                 />
-                <label for="skill-ai-robotics">AI & Robotics</label>
+                <label htmlFor="skill-ai-robotics">AI & Robotics</label>
               </div>
               <div>
                 <input
@@ -245,7 +277,7 @@ function RegistrationForm() {
                   value="skill-cloud-devops"
                   id="skill-cloud-devops"
                 />
-                <label for="skill-cloud-devops">Cloud & DevOps</label>
+                <label htmlFor="skill-cloud-devops">Cloud & DevOps</label>
               </div>
               <div>
                 <input
@@ -254,7 +286,7 @@ function RegistrationForm() {
                   value="skill-cyber-security"
                   id="skill-cyber-security"
                 />
-                <label for="skill-cyber-security">Cyber Security</label>
+                <label htmlFor="skill-cyber-security">Cyber Security</label>
               </div>
               <div>
                 <input
@@ -263,7 +295,7 @@ function RegistrationForm() {
                   value="skill-design-architecture"
                   id="skill-design-architecture"
                 />
-                <label for="skill-design-architecture">
+                <label htmlFor="skill-design-architecture">
                   Design & Architecture
                 </label>
               </div>
@@ -274,7 +306,9 @@ function RegistrationForm() {
                   value="skill-project-management"
                   id="skill-project-management"
                 />
-                <label for="skill-project-management">Project Management</label>
+                <label htmlFor="skill-project-management">
+                  Project Management
+                </label>
               </div>
               <div>
                 <input
@@ -283,7 +317,7 @@ function RegistrationForm() {
                   value="skill-software-development"
                   id="skill-software-development"
                 />
-                <label for="skill-software-development">
+                <label htmlFor="skill-software-development">
                   Software Development
                 </label>
               </div>
