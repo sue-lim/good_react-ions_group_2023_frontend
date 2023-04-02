@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400&family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@900&family=League+Spartan:wght@100;400&family=Manrope&display=swap");
 
 * {
   font-family: "League Spartan", "Arial";
@@ -11,32 +11,6 @@
   color: white;
 }
 
-.signup-container {
-  background-color: #d9e2d5;
-  height: 50%;
-  width: 50%;
-}
-
-.form {
-  /* margin-top: 90px; */
-  width: 100%;
-  padding: 40px;
-  padding-top: 130px;
-  border-radius: 5px;
-  /* background-color: #d9e2d5; */
-  text-align: center;
-  height: 95vh;
-}
-
-input {
-  height: 30px;
-  padding: 20px;
-}
-
-form div {
-  height: 60px;
-}
-
 a.here-link {
   color: #3e6765;
 }
@@ -44,7 +18,7 @@ a.here-link {
 button {
   height: 30px;
   width: 120px;
-  margin: 10px;
+  margin-bottom: 10px;
   background-color: #3e6765;
   color: white;
   border: none;
@@ -59,10 +33,168 @@ button {
   margin: 10px;
   border-radius: 15px;
 }
+
 .project-card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   /* box-shadow: 0px 0px 5px lightslategray; */
   padding: 10px;
+}
+
+
+/* Event Page */
+
+.event_title {
+  color: #4e2780;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  font-family: "Barlow", sans-serif;
+}
+
+.eventpage {
+  margin-top: 150px;
+  margin-left: 250px;
+  margin-right: 250px;
+
+  /* margin-left: 300px;
+  margin-right: 300px; */
+}
+
+.project_img {
+  width: 450px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 30px;
+
+}
+
+.project_details {
+  background-color: #D9E2D5;
+  text-align: left;
+  border-radius: 15px 50px;
+  padding-left: 35px;
+  padding-right: 30px;
+  padding-top: 20px;
+  width: 450px;
+  height: 400px;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 20px;
+
+}
+
+.description {
+  width: auto;
+  height: 290px;
+  overflow: auto;
+
+}
+
+/* scroll width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4e2780;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.details_title {
+  color: #4e2780;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: "Barlow", sans-serif;
+}
+
+/* .photoandorg {
+  display: flex;
+  justify-content: space-around;
+} */
+
+.photoandorg {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.org_title {
+  color: #4e2780;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: "Barlow", sans-serif;
+  text-align: left;
+}
+
+.organiser_img {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+}
+
+.orgbox {
+  margin-left: 40px;
+}
+
+.orgimgname {
+  background-color: #D9E2D5;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+}
+
+.iconevent {
+  width: 20px;
+  height: 19px;
+  margin-bottom: 10px;
+}
+
+.eventdata {
+  font-size: 20px;
+  text-align: left;
+  padding: 5px;
+}
+
+.attend_btn {
+  background-color: #3e6765;
+  border-radius: 30px;
+  font-size: 17px;
+  margin-top: 10px;
+  width: 180px;
+  cursor: pointer;
+}
+
+.attend_btn:hover {
+  background-color: white;
+  color: #4e2780;
+  border: 1px solid #4e2780;
+
+}
+
+.attendees {
+  margin-top: 20px;
 }

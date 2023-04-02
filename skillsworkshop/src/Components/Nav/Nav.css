@@ -2,13 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600&display=swap");
 
 #nav-bar {
+  font-family: "League Spartan", "Arial";
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 100px;
   background-color: #3e6765;
+  top: 0;
 }
 
 #logo {
@@ -16,20 +18,96 @@
   margin-top: 5px;
 }
 
-#nav-list {
-  font-family: "League Spartan";
-  /* border-bottom: 1px solid white; */
-  font-weight: 600;
-  font-size: 23px;
-  list-style: none;
-  width: 600px;
-  display: flex;
-  justify-content: space-around;
-  color: white;
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 
-#nav-list a:hover {
-  text-shadow: 2px 0 black;
+.topnav {
+  position: fixed;
+  z-index: -10;
+  width: 100%;
+  overflow: hidden;
+  background-color: #3e6765;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  margin: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.topnav a:hover {
+  /* background-color: #d9e2d5; */
   color: #d9e2d5;
-  /* font-size: 24px; */
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.icon {
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  #nav-bar {
+    display: block;
+    height: 60px;
+  }
+
+  #logo {
+    position: absolute;
+    height: 50px;
+    margin-top: 5px;
+  }
+
+  a.active {
+    margin-top: 60px;
+  }
+
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  a.icon {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .active {
+    margin-top: 30px;
+  }
 }
