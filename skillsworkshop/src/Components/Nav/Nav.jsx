@@ -59,7 +59,7 @@ function Nav(props) {
           HOME
         </Link>
 
-        <a href="javascript:void(0);" className="icon" onClick={myFunction}>
+        <a href="#" className="icon" onClick={myFunction}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>

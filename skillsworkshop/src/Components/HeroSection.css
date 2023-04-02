@@ -83,6 +83,7 @@ video {
 
 .title {
   color: #4e2780;
+  margin-top: 50px;
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 10px;
