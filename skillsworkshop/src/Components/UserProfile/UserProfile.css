@@ -20,11 +20,11 @@
     padding-top: 150px;
 }
 
-.containerdetails {
+/* .containerdetails {
     display: flex;
     justify-content: left;
     align-items: center;
-}
+} */
 
 .icon {
     width: 30px;
@@ -40,11 +40,11 @@
 
 .skillscontainer {
     text-align: left;
-    border-radius: 20px;
+    border-radius: 17px;
     padding-left: 35px;
     padding-right: 30px;
     padding-top: 20px;
-    width: 200px;
+    width: 250px;
     height: auto;
     font-size: 20px;
     line-height: 1.2;
@@ -95,3 +95,4 @@
     font-weight: bolder;
     font-family: "Barlow", sans-serif;
     margin-bottom: 20px;
+}

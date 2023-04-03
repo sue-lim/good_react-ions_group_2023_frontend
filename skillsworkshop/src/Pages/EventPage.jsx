@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+
 import "../App.css";
 
 function EventPage() {
@@ -17,6 +18,21 @@ function EventPage() {
       });
   }, []);
 
+
+  const [UserData, setUserData] = useState([]);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}users/${id}/`)
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        setUserData(data);
+      });
+  }, []);
+
+
+
   return (
     <div className="eventpage">
 
@@ -31,11 +47,11 @@ function EventPage() {
 
         <div className="orgbox">
           <div className="orgimgname">
-            <img className="organiser_img" src={projectData.image} />
+            <img className="organiser_img" src={UserData.profile_picture} />
 
             <div className="mynightmare">
               <h4 className="org_title">Organiser:</h4>
-              <p className="eventdata">{projectData.organizer}</p>
+              <p className="eventdata">{UserData.first_name} {UserData.last_name}</p>
             </div>
           </div>
 
@@ -44,7 +60,7 @@ function EventPage() {
             <img className="iconevent" src="https://i.postimg.cc/JzRNrSdn/location.png"></img><p className="eventdata">{projectData.location}</p>
           </div>
           <div className="containerdetails">
-            <img className="iconevent" src="https://i.postimg.cc/d3p39jSC/time.png"></img><p className="eventdata">{new Date(projectData.datetime).toLocaleDateString()}</p>
+            <img className="iconevent" src="https://i.postimg.cc/d3p39jSC/time.png"></img><p className="eventdata">{new Date(projectData.datetime).toLocaleDateString()} {new Date(projectData.datetime).toLocaleTimeString()}</p>
           </div>
 
           <div className="containerdetails">
@@ -74,7 +90,7 @@ function EventPage() {
 
       <div className="attendees">
         <h2 className="details_title">Attendees:</h2>
-        <img className="organiser_img" src={projectData.image} />
+        <img className="organiser_img" src={UserData.profile_picture} />
 
       </div>
 

@@ -39,7 +39,9 @@ function UserProfile() {
 
         <div className="skillscontainer">
           <h1 className="user_titles"> Skills:</h1>
-          <p>{UserData.skills}</p>
+          <ul>
+            <p className="skills">{UserData.skills}</p>
+          </ul>
         </div>
 
         <div className="biocontainer">
