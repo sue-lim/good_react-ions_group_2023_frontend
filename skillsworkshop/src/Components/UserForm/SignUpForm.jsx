@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+// import Select from "react-select";
 
 import "./UserForm.css";
 
@@ -21,6 +22,17 @@ function SignUpForm() {
     skills: "",
     interest: "",
   });
+
+  //   const options = [
+  //     { value: "AI & Robotics", label: "AI & Robotics" },
+  //     { value: "Cloud & DevOps", label: "Cloud & DevOps" },
+  //     { value: "Cyber Security", label: "Cyber Security" },
+  //     { value: "Design & Architecture", label: "Design & Architecture" },
+  //     { value: "Project Management", label: "Project Management" },
+  //     { value: "Software Development", label: "Software Development" },
+  //   ];
+
+  //   const MyComponent = () => <Select options={options} />;
 
   const navigate = useNavigate();
 
@@ -114,8 +126,10 @@ function SignUpForm() {
         <input type="message" id="bio" onChange={handleChange} />
       </div>
       <div>
-        <label htmlFor="interest">What are you Interested to Learn?</label>
-        <select id="interest" onChange={handleChange}>
+        <label htmlFor="interest" list="interest" onChange={handleChange}>
+          What are you Interested to Learn?
+        </label>
+        <select id="interest">
           <option disabled selected="true">
             -- Select a Topic --
           </option>
@@ -126,6 +140,18 @@ function SignUpForm() {
           <option value="Project Management">Project Management</option>
           <option value="Software Development">Software Development</option>
         </select>
+        {/* <select id="interest">
+          <option disabled selected={true}>
+            -- Select a Topic --
+          </option>
+          <option>AI & Robotics</option>
+          <option>Cloud & DevOps</option>
+          <option>Cyber Security</option>
+          <option>Design & Architecture</option>
+          <option>Project Management</option>
+          <option>Software Development</option>
+        </select> */}
+        {/* <Select id="interest" options={options} isMulti /> */}
       </div>
       <div>
         <label htmlFor="is_mentor">Are You Signing Up As a Mentor?</label>
@@ -155,7 +181,7 @@ function SignUpForm() {
       </div>
       {showSkills ? (
         <div>
-          <label htmlFor="skills">
+          <label htmlFor="skills" list="skills" onChange={handleChange}>
             {" "}
             Select the skills you'd like to teach:{" "}
           </label>
@@ -170,6 +196,18 @@ function SignUpForm() {
             <option value="Project Management">Project Management</option>
             <option value="Software Development">Software Development</option>
           </select>
+          {/* <select id="skills">
+            <option disabled selected={true}>
+              -- Select a Topic --
+            </option>
+            <option>AI & Robotics</option>
+            <option>Cloud & DevOps</option>
+            <option>Cyber Security</option>
+            <option>Design & Architecture</option>
+            <option>Project Management</option>
+            <option>Software Development</option>
+          </select> */}
+          {/* <Select id="skills" options={options} isMulti /> */}
         </div>
       ) : (
         ""

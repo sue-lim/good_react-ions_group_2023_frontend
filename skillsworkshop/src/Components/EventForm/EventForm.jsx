@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+// import Select from "react-select";
 // import "./EventForm.css";
 
 function EventForm() {
   const [workshop, setWorkshop] = useState({
-    topic: null,
+    topic: "",
     event_title: "",
     description: "",
     datetime: null,
@@ -16,6 +17,15 @@ function EventForm() {
   });
 
   const [users, setUsers] = useState([]);
+
+  // const options = [
+  //   { value: "AI & Robotics", label: "AI & Robotics" },
+  //   { value: "Cloud & DevOps", label: "Cloud & DevOps" },
+  //   { value: "Cyber Security", label: "Cyber Security" },
+  //   { value: "Design & Architecture", label: "Design & Architecture" },
+  //   { value: "Project Management", label: "Project Management" },
+  //   { value: "Software Development", label: "Software Development" },
+  // ];
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}users/`) // making network request to url
@@ -80,7 +90,9 @@ function EventForm() {
         </select>
       </div>
       <div>
-        <label htmlFor="topic">Topic:</label>
+        <label htmlFor="topic" list="topic" onChange={handleChange}>
+          Topic:
+        </label>
         <select id="topic" onChange={handleChange}>
           <option disabled selected="true">
             -- Select a Topic --
@@ -92,6 +104,7 @@ function EventForm() {
           <option value="Project Management">Project Management</option>
           <option value="Software Development">Software Development</option>
         </select>
+        {/* <Select id="topic" options={options} isMulti /> */}
       </div>
       <div>
         <label htmlFor="event_title">Title:</label>
