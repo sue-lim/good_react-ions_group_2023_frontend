@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 
 // import { allProjects } from "../data";
 import EventCard from "../Components/EventCard/EventCard";
+import UserCard from "./UserCard/UserCard";
 
 function HeroSection() {
   const [workshopList, setWorkshopList] = useState([]);

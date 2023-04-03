@@ -10,6 +10,7 @@ import Profile from "./Pages/UserProfile";
 import CreateEventPage from "./Pages/CreateEventPage";
 import AllEventsPage from "./Pages/AllEventsPage";
 import EventPage from "./Pages/EventPage";
+import AllMentorsPage from "./Pages/AllMentorsPage";
 
 // Components
 import Nav from "./Components/Nav/Nav";
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
       { path: "/events", element: <AllEventsPage /> },
       { path: "/create-event", element: <CreateEventPage /> },
       { path: "/events/:id", element: <EventPage /> },
+      { path: "/mentors", element: <AllMentorsPage /> },
     ],
   },
 ]);

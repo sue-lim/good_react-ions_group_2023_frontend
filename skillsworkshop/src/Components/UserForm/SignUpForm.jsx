@@ -155,8 +155,11 @@ function SignUpForm() {
       </div>
       {showSkills ? (
         <div>
-          <h3> Select the skills you'd like to teach: </h3>
-          <select htmlFor="skills" onChange={handleChange}>
+          <label htmlFor="skills">
+            {" "}
+            Select the skills you'd like to teach:{" "}
+          </label>
+          <select id="skills" onChange={handleChange}>
             <option disabled selected={true}>
               -- Select a Topic --
             </option>
