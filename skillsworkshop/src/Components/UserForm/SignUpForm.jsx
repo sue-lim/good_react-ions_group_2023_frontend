@@ -129,7 +129,7 @@ function SignUpForm() {
         <label htmlFor="interest" list="interest" onChange={handleChange}>
           What are you Interested to Learn?
         </label>
-        <select id="interest">
+        <select id="interest" onChange={handleChange}>
           <option disabled selected="true">
             -- Select a Topic --
           </option>
