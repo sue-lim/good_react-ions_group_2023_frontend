@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import "../App.css";
 
 function EventPage() {
-  const [projectData, setProjectData] = useState([]);
+  const [projectData, setProjectData] = useState({ attendees: [] });
 
   const { id } = useParams();
 
@@ -90,8 +90,18 @@ function EventPage() {
 
       <div className="attendees">
         <h2 className="details_title">Attendees:</h2>
-        <img className="organiser_img" src={UserData.profile_picture} />
-
+        <div>
+          {projectData.attendees.map((attendeesData, key) => {
+            return (
+              <div key={key}>
+                <div className="orgimgname">
+                  <img className="organiser_img" src={attendeesData.profile_picture} />
+                  <p className="eventdata">{attendeesData.first_name} {attendeesData.last_name}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
     </div>
