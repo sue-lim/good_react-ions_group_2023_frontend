@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
 
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 // import { allProjects } from "../data";
 import EventCard from "../Components/EventCard/EventCard";
@@ -43,10 +43,10 @@ function HeroSection() {
         <h1 className="today">Learning Today,</h1>
         <h2 className="tomorrow">Leading Tomorrow.</h2>
         <p className="start"> Start your learning journey today!</p>
-        <a href="/events" className="GetStartedBtn">
+        <Link to="/events" className="GetStartedBtn">
           {" "}
           Get Started{" "}
-        </a>
+        </Link>
       </div>
       <div className="containerabout">
         <div className="aboutUs">
