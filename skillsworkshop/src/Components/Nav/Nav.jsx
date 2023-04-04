@@ -52,6 +52,12 @@ function Nav(props) {
             CREATE
           </Link>
         )}
+        {loggedIn && (
+          <Link className="nav-link" to="/mentors">
+            MENTORS
+          </Link>
+        )}
+
         <Link to="/events" className="nav-link">
           EVENTS
         </Link>
