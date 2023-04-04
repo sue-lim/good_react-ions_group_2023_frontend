@@ -5,8 +5,12 @@ import { useState } from "react";
 import SignupPage from "./Pages/SignupPage";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./Pages/HomePage";
+//Pages
 import Profile from "./Pages/UserProfile";
 import CreateEventPage from "./Pages/CreateEventPage";
+import AllEventsPage from "./Pages/AllEventsPage";
+import EventPage from "./Pages/EventPage";
+import AllMentorsPage from "./Pages/AllMentorsPage";
 
 // Components
 import Nav from "./Components/Nav/Nav";
@@ -14,8 +18,6 @@ import Footer from "./Components/Footer/Footer";
 
 //CSS
 import "./App.css";
-import AllEventsPage from "./Pages/AllEventsPage";
-import EventPage from "./Pages/EventPage";
 
 const Layout = () => {
   const [loggedIn, setLoggedIn] = useState(
@@ -42,6 +44,7 @@ const router = createBrowserRouter([
       { path: "/events", element: <AllEventsPage /> },
       { path: "/create-event", element: <CreateEventPage /> },
       { path: "/events/:id", element: <EventPage /> },
+      { path: "/mentors", element: <AllMentorsPage /> },
     ],
   },
 ]);

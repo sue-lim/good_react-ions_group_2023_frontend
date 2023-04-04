@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
 
@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 
 // import { allProjects } from "../data";
 import EventCard from "../Components/EventCard/EventCard";
+import UserCard from "./UserCard/UserCard";
 
 function HeroSection() {
   const [workshopList, setWorkshopList] = useState([]);
