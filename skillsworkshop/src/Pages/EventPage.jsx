@@ -6,6 +6,8 @@ import "../App.css";
 function EventPage() {
   const [projectData, setProjectData] = useState({ attendees: [] });
 
+
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,6 +20,22 @@ function EventPage() {
       });
   }, []);
 
+
+  // const [topicData, setTopicData] = useState({ topic: [] });
+
+  // useEffect(() => {
+  //   fetch(`${import.meta.env.VITE_API_URL}events/${id}/`)
+  //     .then((results) => {
+  //       return results.json();
+  //     })
+  //     .then((data) => {
+  //       setTopicData(data);
+  //     });
+  // }, []);
+
+
+
+
   const [UserData, setUserData] = useState([]);
 
   useEffect(() => {
@@ -29,6 +47,7 @@ function EventPage() {
         setUserData(data);
       });
   }, []);
+
 
   const [buttonText, setButtonText] = useState("Attend");
 
@@ -55,9 +74,12 @@ function EventPage() {
 
               <div className="mynightmare">
                 <h4 className="org_title">Organiser:</h4>
-                <p className="eventdata">
-                  {UserData.first_name} {UserData.last_name}
-                </p>
+                <Link to={`/users/${UserData.id}`}>
+                  <p className="eventdata">
+                    {UserData.first_name} {UserData.last_name}
+                  </p>
+                </Link>
+
               </div>
             </div>
 
@@ -110,12 +132,21 @@ function EventPage() {
                 <div key={key}>
                   <div className="orgimgname">
                     <img className="organiser_img" src={attendeesData.profile_picture} />
-                    <p className="eventdata">{attendeesData.first_name} {attendeesData.last_name}</p>
+
+                    <Link className="eventdata" to={`/users/${attendeesData.id}`}>
+                      <p className="eventdata">{attendeesData.first_name} {attendeesData.last_name}</p>
+                    </Link>
+
                   </div>
                 </div>
               );
+
             })}
           </div>
+
+
+
+
         </div>
 
 
@@ -123,7 +154,7 @@ function EventPage() {
 
 
 
-    </div>
+    </div >
   );
 }
 
