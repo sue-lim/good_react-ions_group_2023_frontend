@@ -10,6 +10,7 @@ import UserCard from "./UserCard/UserCard";
 
 function HeroSection() {
   const [workshopList, setWorkshopList] = useState([]);
+  const [userData, setUserData] = useState([]);
 
   const { id } = useParams();
 
@@ -21,6 +22,17 @@ function HeroSection() {
       .then((data) => {
         // console.log(data);
         setWorkshopList(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}users/`) // making network request to url
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        // console.log(data);
+        setUserData(data);
       });
   }, []);
 
@@ -65,7 +77,24 @@ function HeroSection() {
             opportunities to learn and grow, we can help create a more inclusive
             and equitable world for everyone.{" "}
           </p>
-          <p className="AboutUsTxt">(number of users here)</p>
+          <div className="data-box">
+            {" "}
+            <div className="data-card">
+              {" "}
+              <p className="data-num">{userData.length}</p>
+              <p className="AboutUsTxt">Users</p>
+            </div>
+            <div className="data-card">
+              {" "}
+              <p className="data-num">7</p>
+              <p className="AboutUsTxt">Mentors</p>
+            </div>
+            <div className="data-card">
+              {" "}
+              <p className="data-num">{workshopList.length}</p>
+              <p className="AboutUsTxt">Events</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="containerevents">
