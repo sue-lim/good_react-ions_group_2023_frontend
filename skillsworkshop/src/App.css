@@ -238,15 +238,19 @@ button {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 900px) {
-  .all-events {
-    grid-template-columns: 50% 50%;
-  }
+@media screen and (max-width: 1100px) {
   .all-mentors {
     grid-template-columns: 33% 33% 33%;
   }
+
   .all-mentors-container {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .all-events {
+    grid-template-columns: 50% 50%;
   }
 }
 

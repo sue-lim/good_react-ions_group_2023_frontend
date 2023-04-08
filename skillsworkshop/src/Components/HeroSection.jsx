@@ -63,20 +63,24 @@ function HeroSection() {
       <div className="containerabout">
         <div className="aboutUs">
           <h1 className="title">Our Mission</h1>
-          <p className="AboutUsTxt">
+          <div className="aboutus-container">
             {" "}
-            We want to connect Mentors, Mentees, and Organisations within the
-            Tech Industry to help individuals develop technical and
-            non-technical skills.
-          </p>
-          <p className="AboutUsTxt">
-            {" "}
-            Our purpose is to reach as many users as possible and provide them
-            with the skills that will benefit them in a digital world. We
-            believe that by connecting people and providing them with
-            opportunities to learn and grow, we can help create a more inclusive
-            and equitable world for everyone.{" "}
-          </p>
+            <p className="AboutUsTxt">
+              {" "}
+              We give mentors and organisations a space to host workshops to
+              help people grow skills within the Tech Industry and expand their
+              network in the tech community.
+            </p>
+            <p className="AboutUsTxt">
+              {" "}
+              Our purpose is to reach as many users as possible and provide them
+              with the skills that will benefit them in a digital world. We
+              believe that by connecting people and providing them with
+              opportunities to learn and grow, we can help create a more
+              inclusive and equitable world for everyone.{" "}
+            </p>
+          </div>
+
           <div className="data-box">
             {" "}
             <div className="data-card">

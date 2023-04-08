@@ -210,10 +210,14 @@ video {
   margin-right: 20%;
 }
 
+.aboutus-container {
+  margin-top: 40px;
+}
+
 .data-box {
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .data-card {
