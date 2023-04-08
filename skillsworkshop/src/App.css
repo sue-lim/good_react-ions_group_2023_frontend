@@ -25,10 +25,7 @@ button {
 }
 
 .project-card {
-  /* width: 100%; */
-  /* border: 1px solid black; */
   background-color: #d9e2d5;
-  /* box-shadow: 0px 2px 5px lightslategray; */
   padding: 10px;
   margin: 10px;
   border-radius: 15px;
@@ -43,6 +40,11 @@ button {
 }
 
 /* Event Page */
+.events {
+  margin-top: 110px;
+  margin-bottom: 100px;
+  /* display: block; */
+}
 
 .event_title {
   color: #4e2780;
@@ -55,17 +57,43 @@ button {
   font-family: "Barlow", sans-serif;
 }
 
+.all-events {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.all-mentors {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
 .eventpage {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 150px;
-  /* margin-left: 250px;
-  margin-right: 250px; */
+  margin-top: 100px;
+}
 
-  /* margin-left: 300px;
-  margin-right: 300px; */
+.events-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.all-events-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-mentors-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88%;
+  margin: auto;
 }
 
 .project_img {
@@ -89,10 +117,29 @@ button {
   margin-top: 20px;
 }
 
+.event-details {
+  margin-bottom: 15px;
+}
+
 .description {
   width: auto;
   height: 290px;
   overflow: auto;
+}
+
+.card-title {
+  padding: 0;
+}
+
+.name-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-details {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 /* scroll width */
@@ -187,12 +234,37 @@ button {
   cursor: pointer;
 }
 
-.attend_btn:hover {
-  background-color: white;
-  color: #4e2780;
-  border: 1px solid #4e2780;
-}
-
 .attendees {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .all-mentors {
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  .all-mentors-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .all-events {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .all-events {
+    display: block;
+  }
+  .all-mentors {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .all-mentors {
+    display: block;
+  }
 }

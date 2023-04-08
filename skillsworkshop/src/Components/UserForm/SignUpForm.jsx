@@ -67,7 +67,7 @@ function SignUpForm() {
         if (!response.ok) {
           throw new Error(await response.text());
         }
-        navigate(`/events`);
+        navigate(`/login`);
       } catch (err) {
         console.error(err);
         alert(`Error: ${err.message}`);

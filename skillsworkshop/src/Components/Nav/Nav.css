@@ -14,7 +14,7 @@
 }
 
 #logo {
-  height: 88px;
+  height: 75px;
   margin-top: 5px;
 }
 
@@ -87,9 +87,7 @@
   a.icon {
     margin-right: 20px;
   }
-}
 
-@media screen and (max-width: 900px) {
   .topnav.responsive {
     position: relative;
   }
@@ -111,3 +109,26 @@
     margin-top: 30px;
   }
 }
+
+/* @media screen and (max-width: 900px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .active {
+    margin-top: 30px;
+  }
+} */

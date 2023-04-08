@@ -29,13 +29,18 @@ function AllEventsPage() {
   const latestProjects = projectList.sort(compare);
 
   return (
-    <div id="all-events">
-      <div id="event-header">
-        <h1>EVENTS PAGE</h1>
+    <div className="events">
+      <div className="events-header">
+        <h1 className="title">EVENTS PAGE</h1>
       </div>
-      {latestProjects.map((project, key) => {
-        return <EventCard key={key} projectData={project} />;
-      })}
+      <div className="all-events-container">
+        {" "}
+        <div className="all-events">
+          {latestProjects.map((project, key) => {
+            return <EventCard key={key} projectData={project} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }

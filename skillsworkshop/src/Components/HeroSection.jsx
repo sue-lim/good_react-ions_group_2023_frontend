@@ -10,6 +10,7 @@ import UserCard from "./UserCard/UserCard";
 
 function HeroSection() {
   const [workshopList, setWorkshopList] = useState([]);
+  const [userData, setUserData] = useState([]);
 
   const { id } = useParams();
 
@@ -21,6 +22,17 @@ function HeroSection() {
       .then((data) => {
         // console.log(data);
         setWorkshopList(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}users/`) // making network request to url
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        // console.log(data);
+        setUserData(data);
       });
   }, []);
 
@@ -51,21 +63,42 @@ function HeroSection() {
       <div className="containerabout">
         <div className="aboutUs">
           <h1 className="title">Our Mission</h1>
-          <p className="AboutUsTxt">
+          <div className="aboutus-container">
             {" "}
-            We want to connect Mentors, Mentees, and Organisations within the
-            Tech Industry to help individuals develop technical and
-            non-technical skills.
-          </p>
-          <p className="AboutUsTxt">
+            <p className="AboutUsTxt">
+              {" "}
+              We give mentors and organisations a space to host workshops to
+              help people grow skills within the Tech Industry and expand their
+              network in the tech community.
+            </p>
+            <p className="AboutUsTxt">
+              {" "}
+              Our purpose is to reach as many users as possible and provide them
+              with the skills that will benefit them in a digital world. We
+              believe that by connecting people and providing them with
+              opportunities to learn and grow, we can help create a more
+              inclusive and equitable world for everyone.{" "}
+            </p>
+          </div>
+
+          <div className="data-box">
             {" "}
-            Our purpose is to reach as many users as possible and provide them
-            with the skills that will benefit them in a digital world. We
-            believe that by connecting people and providing them with
-            opportunities to learn and grow, we can help create a more inclusive
-            and equitable world for everyone.{" "}
-          </p>
-          <p className="AboutUsTxt">(number of users here)</p>
+            <div className="data-card">
+              {" "}
+              <p className="data-num">{userData.length}</p>
+              <p className="AboutUsTxt">Users</p>
+            </div>
+            <div className="data-card">
+              {" "}
+              <p className="data-num">7</p>
+              <p className="AboutUsTxt">Mentors</p>
+            </div>
+            <div className="data-card">
+              {" "}
+              <p className="data-num">{workshopList.length}</p>
+              <p className="AboutUsTxt">Events</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="containerevents">

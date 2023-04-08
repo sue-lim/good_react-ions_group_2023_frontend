@@ -66,3 +66,17 @@ select {
 h3 {
   padding-top: 30px;
 }
+
+@media screen and (max-width: 900px) {
+  .form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  input,
+  label,
+  select {
+    width: 100%;
+  }
+}

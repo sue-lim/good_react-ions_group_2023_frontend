@@ -17,16 +17,21 @@ function AllMentorsPage() {
       });
   }, []);
 
-  console.log(mentorList.is_mentor);
+  // console.log(mentorList.is_mentor);
 
   return (
-    <div id="all-events">
-      <div id="event-header">
-        <h1>EVENTS PAGE</h1>
+    <div className="events">
+      <div className="events-header">
+        <h1 className="title">Reach out to our Mentors!</h1>
       </div>
-      {mentorList.map((user, key) => {
-        return <UserCard key={key} UserData={user} />;
-      })}
+      <div className="all-mentors-container">
+        {" "}
+        <div className="all-mentors">
+          {mentorList.map((user, key) => {
+            return <UserCard key={key} UserData={user} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
