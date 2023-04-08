@@ -30,11 +30,16 @@ function AllEventsPage() {
 
   return (
     <div className="events">
-      <h1 className="title">EVENTS PAGE</h1>
-      <div id="all-events">
-        {latestProjects.map((project, key) => {
-          return <EventCard key={key} projectData={project} />;
-        })}
+      <div className="events-header">
+        <h1 className="title">EVENTS PAGE</h1>
+      </div>
+      <div className="all-events-container">
+        {" "}
+        <div id="all-events">
+          {latestProjects.map((project, key) => {
+            return <EventCard key={key} projectData={project} />;
+          })}
+        </div>
       </div>
     </div>
   );

@@ -95,6 +95,7 @@ video {
   font-weight: bolder;
   margin-bottom: 10px;
   font-family: "Barlow", sans-serif;
+  /* margin: auto; */
 }
 
 .AboutUsTxt {
