@@ -35,7 +35,7 @@ function AllEventsPage() {
       </div>
       <div className="all-events-container">
         {" "}
-        <div id="all-events">
+        <div className="all-events">
           {latestProjects.map((project, key) => {
             return <EventCard key={key} projectData={project} />;
           })}

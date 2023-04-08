@@ -25,14 +25,9 @@ button {
 }
 
 .project-card {
-  /* width: 400px; */
-  /* width: 100%; */
-  /* border: 1px solid black; */
   background-color: #d9e2d5;
-  /* box-shadow: 0px 2px 5px lightslategray; */
   padding: 10px;
   margin: 10px;
-  /* margin: auto; */
   border-radius: 15px;
 }
 
@@ -62,9 +57,14 @@ button {
   font-family: "Barlow", sans-serif;
 }
 
-#all-events {
+.all-events {
   display: grid;
   grid-template-columns: 33% 33% 33%;
+}
+
+.all-mentors {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 .eventpage {
@@ -88,6 +88,14 @@ button {
   align-items: center;
 }
 
+.all-mentors-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88%;
+  margin: auto;
+}
+
 .project_img {
   width: 450px;
   height: 300px;
@@ -109,10 +117,29 @@ button {
   margin-top: 20px;
 }
 
+.event-details {
+  margin-bottom: 15px;
+}
+
 .description {
   width: auto;
   height: 290px;
   overflow: auto;
+}
+
+.card-title {
+  padding: 0;
+}
+
+.name-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-details {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 /* scroll width */
@@ -212,16 +239,28 @@ button {
 }
 
 @media screen and (max-width: 900px) {
-  #all-events {
+  .all-events {
     grid-template-columns: 50% 50%;
+  }
+  .all-mentors {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .all-mentors-container {
+    width: 95%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  /* #all-events {
-    grid-template-columns: 90%;
-  } */
-  #all-events {
+  .all-events {
+    display: block;
+  }
+  .all-mentors {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .all-mentors {
     display: block;
   }
 }

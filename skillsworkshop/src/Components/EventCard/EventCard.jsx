@@ -10,7 +10,7 @@ function ProjectCard(props) {
         <img src={projectData.image} />
       </Link>
       <div className="event-details">
-        <h3>{projectData.event_title}</h3>
+        <h3 className="card-title">{projectData.event_title}</h3>
         <p>{projectData.location}</p>
       </div>
       {/* <button type="submit">Click to view</button> */}
