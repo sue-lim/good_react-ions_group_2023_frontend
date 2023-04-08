@@ -21,21 +21,6 @@ function EventPage() {
   }, []);
 
 
-  // const [topicData, setTopicData] = useState({ topic: [] });
-
-  // useEffect(() => {
-  //   fetch(`${import.meta.env.VITE_API_URL}events/${id}/`)
-  //     .then((results) => {
-  //       return results.json();
-  //     })
-  //     .then((data) => {
-  //       setTopicData(data);
-  //     });
-  // }, []);
-
-
-
-
   const [UserData, setUserData] = useState([]);
 
   useEffect(() => {
@@ -154,7 +139,7 @@ function EventPage() {
 
 
 
-    </div >
+    </div>
   );
 }
 
