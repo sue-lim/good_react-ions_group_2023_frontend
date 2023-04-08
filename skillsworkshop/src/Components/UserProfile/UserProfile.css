@@ -100,3 +100,24 @@
 .bioandskills {
     padding-bottom: 50px;
 }
+
+
+@media screen and (max-width: 480px) {
+    .containerdetails {
+        margin-left: 0px;
+    }
+
+    .biocontainer {
+        width: 250px;
+    }
+
+    .bioandskills {
+        display: block;
+    }
+
+    .containerprofile {
+        display: block;
+        margin-left: 25%;
+    }
+
+}
