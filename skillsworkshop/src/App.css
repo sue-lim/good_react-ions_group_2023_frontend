@@ -45,6 +45,16 @@ button {
 }
 
 /* Event Page */
+.events {
+  margin-top: 150px;
+}
+/* 
+#event-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+} */
 
 .event_title {
   color: #4e2780;
@@ -55,6 +65,11 @@ button {
   font-weight: bolder;
   margin-bottom: 20px;
   font-family: "Barlow", sans-serif;
+}
+
+#all-events {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .eventpage {

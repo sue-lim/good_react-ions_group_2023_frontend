@@ -81,18 +81,18 @@ function HeroSection() {
             {" "}
             <div className="data-card">
               {" "}
-              <p>{userData.length}</p>
+              <p className="data-num">{userData.length}</p>
               <p className="AboutUsTxt">Users</p>
             </div>
             <div className="data-card">
               {" "}
-              <p>7</p>
+              <p className="data-num">7</p>
               <p className="AboutUsTxt">Mentors</p>
             </div>
             <div className="data-card">
               {" "}
-              <p>{workshopList.length}</p>
-              <p className="AboutUsTxt">Events Created</p>
+              <p className="data-num">{workshopList.length}</p>
+              <p className="AboutUsTxt">Events</p>
             </div>
           </div>
         </div>
