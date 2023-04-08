@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
-
-import { useParams, Link } from "react-router-dom";
 
 // import { allProjects } from "../data";
 import EventCard from "../Components/EventCard/EventCard";
