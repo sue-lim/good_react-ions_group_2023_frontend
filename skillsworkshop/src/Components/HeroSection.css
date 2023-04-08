@@ -75,7 +75,7 @@ video {
 }
 
 .aboutUs {
-  height: 80vh;
+  height: 90vh;
   padding-top: 20px;
   background-color: white;
   text-align: center;
@@ -131,6 +131,7 @@ video {
 
 .project-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -204,5 +205,46 @@ video {
   margin-right: 20%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
+  .AboutUsTxt {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  .aboutUs {
+    width: 90%;
+    height: 90vh;
+  }
+
+  #project-list {
+    grid-template-columns: 45% 45%;
+  }
+
+  .main-container {
+    height: 80vh;
+  }
+
+  .containerevents {
+    height: 100vh;
+  }
+}
+
+/* @media screen and (max-width: 820px) {
+  .aboutUS {
+    height: 50vh;
+  }
+} */
+
+@media screen and (max-width: 590px) {
+  #project-list {
+    display: block;
+  }
+
+  .containerevents {
+    height: 100%;
+  }
+
+  .main-container {
+    height: 100vh;
+  }
 }
