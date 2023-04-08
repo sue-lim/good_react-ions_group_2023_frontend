@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext, Link } from "react-router-dom";
 
 function LoginForm() {
   const [, setLoggedIn] = useOutletContext();
@@ -75,6 +75,9 @@ function LoginForm() {
           LOGIN
         </button>
       </div>
+      <p>
+        Not a user? Sign up <Link to="/sign-up">here</Link>
+      </p>
     </form>
   );
 }

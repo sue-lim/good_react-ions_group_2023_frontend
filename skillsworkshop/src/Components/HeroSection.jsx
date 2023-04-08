@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./HeroSection.css";
 import video from "./videos/office-80314.mp4";
 
@@ -13,6 +14,8 @@ function HeroSection() {
   const [userData, setUserData] = useState([]);
 
   const { id } = useParams();
+
+  const authToken = window.localStorage.getItem("token");
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}events/`) // making network request to url
@@ -55,10 +58,17 @@ function HeroSection() {
         <h1 className="today">Learning Today,</h1>
         <h2 className="tomorrow">Leading Tomorrow.</h2>
         <p className="start"> Start your learning journey today!</p>
-        <a href="/events" className="GetStartedBtn">
-          {" "}
-          Get Started{" "}
-        </a>
+        {authToken ? (
+          <Link to="/events" className="GetStartedBtn">
+            {" "}
+            Get Started{" "}
+          </Link>
+        ) : (
+          <Link to="/login" className="GetStartedBtn">
+            {" "}
+            Get Started{" "}
+          </Link>
+        )}
       </div>
       <div className="containerabout">
         <div className="aboutUs">
