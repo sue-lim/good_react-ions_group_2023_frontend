@@ -5,7 +5,6 @@ import video from "./videos/office-80314.mp4";
 
 // import { allProjects } from "../data";
 import EventCard from "../Components/EventCard/EventCard";
-import UserCard from "./UserCard/UserCard";
 
 function HeroSection() {
   const [workshopList, setWorkshopList] = useState([]);
