@@ -26,6 +26,8 @@ button {
   background-color: #3e6765;
   color: white;
   border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .project-button {

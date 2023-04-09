@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 // import Select from "react-select";
 
 import "./UserForm.css";
@@ -77,9 +77,11 @@ function SignUpForm() {
     }
   };
 
+
+
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h2>SIGN UP</h2>
+      <h1>Sign Up:</h1>
       <div>
         <label htmlFor="first_name">First Name:</label>
         <input type="text" id="first_name" onChange={handleChange} />
@@ -154,7 +156,7 @@ function SignUpForm() {
         {/* <Select id="interest" options={options} isMulti /> */}
       </div>
       <div>
-        <label htmlFor="is_mentor">Are You Signing Up As a Mentor?</label>
+        <label htmlFor="is_mentor">Are You Signing Up as a Mentor?</label>
         <div className="radio">
           <div className="radio-button">
             <input
@@ -171,6 +173,7 @@ function SignUpForm() {
           <div className="radio-button">
             <input
               type="radio"
+              name="mentor"
               value={false}
               id="is_mentor"
               onChange={() => setShowSkills(false)}
@@ -213,6 +216,9 @@ function SignUpForm() {
         ""
       )}
       <button type="submit">Create Account</button>
+      <p>
+        Already have an account? Log in <Link to="/login">here</Link>
+      </p>
     </form>
   );
 }
