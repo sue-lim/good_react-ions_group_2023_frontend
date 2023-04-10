@@ -226,23 +226,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .all-events {
-    display: block;
-  }
-
-  .all-mentors {
-    grid-template-columns: 50% 50%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .all-mentors {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 810px) {
   .photoandorg {
     display: block;
   }
@@ -309,5 +293,21 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .all-events {
+    display: block;
+  }
+
+  .all-mentors {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .all-mentors {
+    display: block;
   }
 }
