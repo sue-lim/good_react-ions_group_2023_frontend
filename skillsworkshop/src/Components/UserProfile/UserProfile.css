@@ -1,23 +1,25 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "League Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
 }
 
 /*User Profile*/
 .userphoto {
-    border-radius: 50%;
-    background: #3e6765;
-    padding: 10px;
-    width: 200px;
-    height: 200px;
+  border-radius: 50%;
+  background: #3e6765;
+  padding: 10px;
+  width: 180px;
+  height: 180px;
+  margin-right: 40px;
 }
 
 .containerprofile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 140px;
+  margin-bottom: 30px;
 }
 
 /* .containerdetails {
@@ -27,46 +29,45 @@
 } */
 
 .icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-    margin-bottom: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  margin-bottom: 10px;
 }
 
 .userdetails {
-    margin-left: 5px;
-    font-size: 20px;
+  margin-left: 5px;
+  font-size: 20px;
 }
 
 .skillscontainer {
-    text-align: left;
-    border-radius: 17px;
-    padding-left: 35px;
-    padding-right: 30px;
-    padding-top: 20px;
-    width: 250px;
-    height: auto;
-    font-size: 20px;
-    line-height: 1.2;
-    margin-top: 20px;
-
+  text-align: left;
+  border-radius: 17px;
+  padding-left: 35px;
+  padding-right: 30px;
+  padding-top: 20px;
+  width: 250px;
+  height: auto;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 20px;
 }
 
 .biocontainer {
-    text-align: left;
-    border-radius: 15px 50px;
-    padding-left: 35px;
-    padding-right: 30px;
-    padding-top: 20px;
-    width: 450px;
-    height: auto;
-    font-size: 20px;
-    line-height: 1.2;
-    margin-top: 20px;
+  text-align: left;
+  border-radius: 15px 50px;
+  padding-left: 35px;
+  padding-right: 30px;
+  padding-top: 20px;
+  width: 450px;
+  height: auto;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 20px;
 }
 
 .profile {
-    background-color: white;
+  background-color: white;
 }
 
 /* .bioandskills {
@@ -76,76 +77,95 @@
 } */
 
 .userpage {
-    height: 100vh;
+  height: 100vh;
 }
 
 .user_titles {
-    color: #4e2780;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-family: "Barlow", sans-serif;
-    margin-bottom: 15px;
+  color: #4e2780;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 15px;
 }
 
 .user_name {
-    color: #4e2780;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-family: "Barlow", sans-serif;
-    margin-bottom: 20px;
+  color: #4e2780;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 20px;
 }
 
 .bioandskills {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
+@media screen and (max-width: 900px) {
+  .bioandskills {
+    width: 100%;
+    margin: 0;
+  }
+
+  .containerprofile {
+    padding-top: 100px;
+  }
+}
 
 @media screen and (max-width: 600px) {
+  .biocontainer {
+    width: 250px;
+  }
 
-    .biocontainer {
-        width: 250px;
-    }
+  .userphoto {
+    margin-bottom: 30px;
+  }
 
-    .bioandskills {
-        display: block;
-    }
+  .bioandskills {
+    display: block;
+  }
 
-    .containerprofile {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+  .containerprofile {
+    display: block;
+    margin-left: auto;
+    /* margin-right: auto; */
+    width: 70%;
+  }
 
-    }
+  .containerdetails {
+    width: 90%;
+  }
 
-    .user_name {
-        font-size: 35px;
-        text-align: center;
-    }
+  .user_name {
+    font-size: 35px;
+    /* text-align: center; */
+  }
 
+  .bioandskills {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 90%; */
+  }
 
-    .bioandskills {
-        margin-left: auto;
-        margin-right: auto;
-        width: 65%;
-    }
+  .skillscontainer,
+  .biocontainer {
+    width: 90%;
+  }
 
-    .userdetails {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-    }
+  .userdetails {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
 
+  .details {
+    margin-left: 0px;
+    margin-right: auto;
+    width: 50%;
+  }
 
-    .details {
-        margin-left: 0px;
-        margin-right: auto;
-        width: 50%;
-    }
-
-    .containerdetails {
-        text-align: left;
-    }
+  .containerdetails {
+    text-align: left;
+  }
 }
