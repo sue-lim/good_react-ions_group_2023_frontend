@@ -31,7 +31,7 @@ function AllEventsPage() {
   return (
     <div className="events">
       <div className="events-header">
-        <h1 className="title">EVENTS PAGE</h1>
+        <h1 className="title">CURRENT EVENTS</h1>
       </div>
       <div className="all-events-container">
         {" "}
