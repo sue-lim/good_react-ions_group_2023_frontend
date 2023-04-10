@@ -19,7 +19,11 @@ function ProjectCard(props) {
       )}
       <div className="event-details">
         <h3 className="card-title">{projectData.event_title}</h3>
-        <p>{projectData.location}</p>
+        <p className="eventcard-detail">
+          {new Date(projectData.datetime).toLocaleDateString()}{" "}
+          {new Date(projectData.datetime).toLocaleTimeString()}
+        </p>
+        <p className="eventcard-detail">{projectData.location}</p>
       </div>
       {/* <button type="submit">Click to view</button> */}
     </div>
