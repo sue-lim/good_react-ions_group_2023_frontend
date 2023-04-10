@@ -103,9 +103,6 @@
 
 
 @media screen and (max-width: 600px) {
-    /* .containerdetails {
-        margin-left: 0px;
-    } */
 
     .biocontainer {
         width: 250px;
@@ -130,20 +127,25 @@
 
 
     .bioandskills {
-        margin-left: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
     }
 
     .userdetails {
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
-
+        text-align: left;
     }
 
 
     .details {
-        margin-left: auto;
+        margin-left: 0px;
         margin-right: auto;
-        text-align: left;
-
+        width: 50%;
     }
+
+    .containerdetails {
+        text-align: left;
+    }
+}
