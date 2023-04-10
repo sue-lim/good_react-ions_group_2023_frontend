@@ -29,12 +29,12 @@
 .icon {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 5px;
     margin-bottom: 10px;
 }
 
 .userdetails {
-    margin-left: 10px;
+    margin-left: 5px;
     font-size: 20px;
 }
 
@@ -102,10 +102,7 @@
 }
 
 
-@media screen and (max-width: 480px) {
-    .containerdetails {
-        margin-left: 0px;
-    }
+@media screen and (max-width: 600px) {
 
     .biocontainer {
         width: 250px;
@@ -117,7 +114,38 @@
 
     .containerprofile {
         display: block;
-        margin-left: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+
     }
 
+    .user_name {
+        font-size: 35px;
+        text-align: center;
+    }
+
+
+    .bioandskills {
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
+    }
+
+    .userdetails {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+
+
+    .details {
+        margin-left: 0px;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .containerdetails {
+        text-align: left;
+    }
 }
