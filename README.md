@@ -1,6 +1,6 @@
 # good_react-ions_group_2023_frontend
 
-She Codes Group Project Front End
+She Codes | Skill Workshop | Group Project | Front End
 Link - https://skillsworkshop.netlify.app/
 
 Front End created via REACT / Vite 
