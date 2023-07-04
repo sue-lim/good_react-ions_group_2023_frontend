@@ -4,7 +4,8 @@ She Codes Group Project Front End
 Link - https://skillsworkshop.netlify.app/
 
 Front End created via REACT / Vite 
-Front end to connect to back end API 
+Front end to connect to back end API
+Deployment via Netlify
 
 Project Description 
 
